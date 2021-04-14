@@ -6,13 +6,15 @@ class InicioPage extends StatelessWidget {
   Widget build(BuildContext context) {
     AppScale _scale = AppScale(context);
 
-    return Center(
-      child: Container(
-        child: Image(
-          image: AssetImage("./assets/banner.png"),
-          fit: BoxFit.cover,
-        ), 
-      ),
+    return Column(
+      children:[
+        Container(
+            child: Image(
+              image: AssetImage("./assets/banner.png"),
+              fit: BoxFit.cover,
+            ), 
+          ),
+      ],
     );
   }
 }
