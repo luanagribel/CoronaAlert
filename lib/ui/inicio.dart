@@ -8,10 +8,10 @@ class InicioPage extends StatelessWidget {
 
     return Center(
       child: Container(
-        child: Text(
-          "Home Page",
-          style: TextStyle(color: Colors.blue, fontSize: _scale.labelDim * 5),
-        ),
+        child: Image(
+          image: AssetImage("./assets/banner.png"),
+          fit: BoxFit.cover,
+        ), 
       ),
     );
   }

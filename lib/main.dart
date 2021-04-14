@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       builder: (_, child) => AppView(child: child),
       initialRoute: routeInicio,
       navigatorKey: navKey,
-      onGenerateRoute: RouteGenerator.generateRoute,
+      onGenerateRoute: RouteGenerator.generatorRoute,
     );
   }
 }

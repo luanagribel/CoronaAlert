@@ -35,7 +35,7 @@ class _NavigationBarState extends State<NavigationBar> {
   Container menuScreenPhone(BuildContext context) {
     return Container(
       width: 50,
-      height: MediaQuery.of(context).size.height * 0.43,
+      height: MediaQuery.of(context).size.height,
       color: Color(0x17202A).withOpacity(0.8),
       child: Column(
         children: [
@@ -71,17 +71,6 @@ class _NavigationBarState extends State<NavigationBar> {
               color: Colors.blue[100],
             ),
             onPressed: () => navKey.currentState.pushNamed('/calendario'),
-          ),
-          Divider(
-            color: Colors.blue,
-          ),
-          IconButton(
-            icon: new FaIcon(
-              FontAwesomeIcons.infoCircle,
-              size: 25,
-              color: Colors.blue[100],
-            ),
-            onPressed: () => navKey.currentState.pushNamed('/orientacoes'),
           ),
           Divider(
             color: Colors.blue,
@@ -128,7 +117,7 @@ class _NavigationBarState extends State<NavigationBar> {
                             color: Colors.blue,
                           ),
                           Text(
-                            "Início",
+                            "Home Page",
                             style: TextStyle(fontSize: 10),
                           )
                         ],
@@ -187,29 +176,6 @@ class _NavigationBarState extends State<NavigationBar> {
                         onSurface: Colors.blue,
                       ),
                       onPressed: () => {
-                        navKey.currentState.pushNamed('/orientacoes'),
-                      },
-                      child: Column(
-                        children: [
-                          FaIcon(
-                            FontAwesomeIcons.infoCircle,
-                            size: 19,
-                            color: Colors.blue,
-                          ),
-                          Text(
-                            "Orientações COVID-19",
-                            style: TextStyle(fontSize: 10),
-                          )
-                        ],
-                      ),
-                    ),
-                    Divider(),
-                    TextButton(
-                      style: TextButton.styleFrom(
-                        primary: Colors.black,
-                        onSurface: Colors.blue,
-                      ),
-                      onPressed: () => {
                         navKey.currentState.pushNamed('/whatsapp'),
                       },
                       child: Column(
@@ -233,6 +199,7 @@ class _NavigationBarState extends State<NavigationBar> {
       ),
     );
   }
+
 
   Container menuScreenDesktop(BuildContext context) {
     return Container(
@@ -259,7 +226,7 @@ class _NavigationBarState extends State<NavigationBar> {
               ),
               NavigationItem(
                 selected: index == 0,
-                title: 'Início',
+                title: 'Home',
                 routeName: routeInicio,
                 onHighlight: onHighlight,
               ),
@@ -310,26 +277,6 @@ class _NavigationBarState extends State<NavigationBar> {
                 width: 10,
               ),
               FaIcon(
-                FontAwesomeIcons.infoCircle,
-                size: 20,
-                color: Colors.white,
-              ),
-              SizedBox(
-                width: 10,
-              ),
-              NavigationItem(
-                selected: index == 3,
-                title: 'Orientações',
-                routeName: routeOrientacoes,
-                onHighlight: onHighlight,
-              ),
-            ]),
-            Divider(),
-            Row(children: [
-              SizedBox(
-                width: 10,
-              ),
-              FaIcon(
                 FontAwesomeIcons.whatsapp,
                 size: 20,
                 color: Colors.white,
@@ -338,7 +285,7 @@ class _NavigationBarState extends State<NavigationBar> {
                 width: 10,
               ),
               NavigationItem(
-                selected: index == 4,
+                selected: index == 3,
                 title: 'Whatsapp',
                 routeName: routeWhatsapp,
                 onHighlight: onHighlight,
@@ -359,11 +306,8 @@ class _NavigationBarState extends State<NavigationBar> {
       case routeCalendario:
         changeHighlight(2);
         break;
-      case routeOrientacoes:
-        changeHighlight(3);
-        break;
       case routeWhatsapp:
-        changeHighlight(4);
+        changeHighlight(3);
         break;
     }
   }
