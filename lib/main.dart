@@ -12,9 +12,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'CORONA SRS',
+      title: 'CoronaAlert SRS',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: Colors.blueGrey,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       builder: (_, child) => AppView(child: child),

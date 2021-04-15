@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'widgets/navigation_bar.dart';
 
 class AppView extends StatefulWidget {
-
   final Widget child;
 
   const AppView({@required this.child});
@@ -32,7 +31,7 @@ class _AppViewState extends State<AppView> {
                 onPressed: () {},
               );
             }),
-            title: Text("CORONA SRS"),
+            title: Text("CoronaAlert SRS"),
             actions: <Widget>[
               IconButton(
                 icon: Icon(Icons.mail_outline_outlined),

@@ -200,13 +200,12 @@ class _NavigationBarState extends State<NavigationBar> {
     );
   }
 
-
   Container menuScreenDesktop(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 0, right: 10),
       alignment: Alignment.centerLeft,
       width: 200,
-      height: MediaQuery.of(context).size.height * 0.80,
+      height: MediaQuery.of(context).size.height,
       color: Color(0x17202A).withOpacity(0.8),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
