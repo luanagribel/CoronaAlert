@@ -31,7 +31,7 @@ class _AppViewState extends State<AppView> {
                 onPressed: () {},
               );
             }),
-            title: Text("CoronaAlert SRS"),
+            title: Text("CoronaAlert"),
             actions: <Widget>[
               IconButton(
                 icon: Icon(Icons.mail_outline_outlined),

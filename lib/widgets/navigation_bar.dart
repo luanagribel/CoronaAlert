@@ -202,7 +202,7 @@ class _NavigationBarState extends State<NavigationBar> {
 
   Container menuScreenDesktop(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 0, right: 10),
+      //margin: EdgeInsets.only(top: 0, right: 10),
       alignment: Alignment.centerLeft,
       width: 200,
       height: MediaQuery.of(context).size.height,
