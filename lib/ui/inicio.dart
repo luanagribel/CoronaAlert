@@ -149,7 +149,7 @@ class InicioPage extends StatelessWidget {
                       0xFFF2F2F2,
                     ),
                     border: Border.all(width: 0.0, color: Color(0xFFCFD8DC)),
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     children: [
@@ -157,7 +157,7 @@ class InicioPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ClipRRect(
-                            borderRadius: BorderRadius.circular(20.0),
+                            borderRadius: BorderRadius.circular(10.0),
                             child: (Image(
                               image: AssetImage("./assets/img2.jpg"),
                               alignment: Alignment.center,
@@ -245,7 +245,7 @@ class InicioPage extends StatelessWidget {
                       0xFFF2F2F2,
                     ),
                     border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
-                    borderRadius: BorderRadius.circular(20),
+                    borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     children: [
@@ -253,7 +253,7 @@ class InicioPage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           ClipRRect(
-                            borderRadius: BorderRadius.circular(20.0),
+                            borderRadius: BorderRadius.circular(10.0),
                             child: (Image(
                               image: AssetImage("./assets/img3.jpg"),
                               alignment: Alignment.center,

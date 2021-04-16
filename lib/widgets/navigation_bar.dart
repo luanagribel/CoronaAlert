@@ -206,7 +206,7 @@ class _NavigationBarState extends State<NavigationBar> {
       alignment: Alignment.centerLeft,
       width: 200,
       height: MediaQuery.of(context).size.height,
-      color: Color(0x17202A).withOpacity(0.8),
+      color: Colors.grey.withOpacity(0.4),
       child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.max,
@@ -215,59 +215,59 @@ class _NavigationBarState extends State<NavigationBar> {
               SizedBox(
                 width: 10,
               ),
-              FaIcon(
-                FontAwesomeIcons.home,
-                size: 20,
-                color: Colors.white,
-              ),
-              SizedBox(
-                width: 10,
-              ),
               NavigationItem(
                 selected: index == 0,
-                title: 'Home',
+                title: 'home',
                 routeName: routeInicio,
                 onHighlight: onHighlight,
+              ),
+              SizedBox(
+                width: 100,
+              ),
+              Icon(
+                Icons.navigate_next_rounded,
+                size: 20,
+                color: Colors.green,
               ),
             ]),
             Divider(),
             Row(children: [
-              SizedBox(
-                width: 10,
-              ),
-              FaIcon(
-                FontAwesomeIcons.virus,
-                size: 20,
-                color: Colors.white,
-              ),
               SizedBox(
                 width: 10,
               ),
               NavigationItem(
                 selected: index == 1,
-                title: 'Boletim',
+                title: 'boletim',
                 routeName: routeBoletim,
                 onHighlight: onHighlight,
+              ),
+              SizedBox(
+                width: 85,
+              ),
+              Icon(
+                Icons.navigate_next_rounded,
+                size: 20,
+                color: Colors.green,
               ),
             ]),
             Divider(),
             Row(children: [
-              SizedBox(
-                width: 10,
-              ),
-              FaIcon(
-                FontAwesomeIcons.calendar,
-                size: 20,
-                color: Colors.white,
-              ),
               SizedBox(
                 width: 10,
               ),
               NavigationItem(
                 selected: index == 2,
-                title: 'Vacinação',
+                title: 'vacinação',
                 routeName: routeCalendario,
                 onHighlight: onHighlight,
+              ),
+              SizedBox(
+                width: 63,
+              ),
+              Icon(
+                Icons.navigate_next_rounded,
+                size: 20,
+                color: Colors.green,
               ),
             ]),
             Divider(),
@@ -275,19 +275,19 @@ class _NavigationBarState extends State<NavigationBar> {
               SizedBox(
                 width: 10,
               ),
-              FaIcon(
-                FontAwesomeIcons.whatsapp,
-                size: 20,
-                color: Colors.white,
-              ),
-              SizedBox(
-                width: 10,
-              ),
               NavigationItem(
                 selected: index == 3,
-                title: 'Whatsapp',
+                title: 'whatsapp',
                 routeName: routeWhatsapp,
                 onHighlight: onHighlight,
+              ),
+              SizedBox(
+                width: 64,
+              ),
+              Icon(
+                Icons.navigate_next_rounded,
+                size: 20,
+                color: Colors.green,
               ),
             ]),
           ]),

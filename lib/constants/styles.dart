@@ -10,7 +10,7 @@ class AppScale {
   double get labelDim => scaleWidth(.02);
   double get popupMenuButton => scaleHeight(.095);
 
-  double scaleWidth(double widthScale){
+  double scaleWidth(double widthScale) {
     return MediaQuery.of(_ctxt).size.width * widthScale;
   }
 

@@ -65,13 +65,13 @@ class _InteractiveTextState extends State<InteractiveText> {
       child: Text(widget.text,
           style: _hovering
               ? kPageTitleStyle.copyWith(
-                  color: Colors.blue,
+                  color: Colors.black54,
                   fontSize: 18,
                   decoration: TextDecoration.underline)
               : (widget.selected)
-                  ? kPageTitleStyle.copyWith(color: Colors.blue, fontSize: 18)
+                  ? kPageTitleStyle.copyWith(color: Colors.green, fontSize: 18)
                   : kPageTitleStyle.copyWith(
-                      color: Colors.white70, fontSize: 18)),
+                      color: Colors.black54, fontSize: 18)),
     );
   }
 
@@ -90,7 +90,6 @@ class _InteractiveTextState extends State<InteractiveText> {
                   : kPageTitleStyle.copyWith(
                       color: Colors.black, fontSize: 14)),
     );
-
   }
 
   _hovered(bool hovered) {
@@ -98,5 +97,4 @@ class _InteractiveTextState extends State<InteractiveText> {
       _hovering = hovered;
     });
   }
-
 }
