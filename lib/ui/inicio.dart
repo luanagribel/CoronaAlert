@@ -115,6 +115,69 @@ class InicioPage extends StatelessWidget {
                   ),
                 ],
               )),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
+            alignment: Alignment(0.0, 0.0),
+            //constraints: BoxConstraints.expand(height: 300),
+            decoration: BoxDecoration(
+              color: Color(
+                0xFFF2F2F2,
+              ),
+              border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Column(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(20.0),
+                  child: (Image(
+                    image: AssetImage("./assets/img1.jpg"),
+                  )),
+                ),
+              ],
+            ),
+          ),
+          Container(
+              width: MediaQuery.of(context).size.width,
+              margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
+              alignment: Alignment(0.0, 0.0),
+              //constraints: BoxConstraints.expand(height: 300),
+              decoration: BoxDecoration(
+                color: Color(
+                  0xFFF2F2F2,
+                ),
+                border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: Column(
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(20.0),
+                    child: (Image(
+                      image: AssetImage("./assets/img4.jpg"),
+                    )),
+                  ),
+                  Text(
+                    "Mais de 16 mil doses de vacina foram aplicadas em Santa Rita",
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xFF1565C0),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(width: MediaQuery.of(context).size.width / 1.5),
+                      Icon(
+                        Icons.navigate_next_rounded,
+                        color: Color(0xFF1565C0),
+                        size: 36.0,
+                      ),
+                    ],
+                  ),
+                ],
+              )),
         ],
       ),
     );
