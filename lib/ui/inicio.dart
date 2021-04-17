@@ -394,6 +394,137 @@ class InicioPage extends StatelessWidget {
                   )),
             ],
           ),
+          Row(
+            children: [
+              Container(
+                  height: MediaQuery.of(context).size.width / 2.8,
+                  width: MediaQuery.of(context).size.width / 2.5,
+                  margin: EdgeInsets.fromLTRB(40.0, 0.0, 20.0, 5.0),
+                  alignment: Alignment(0.0, 0.0),
+                  padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
+                  //constraints: BoxConstraints.expand(height: 300),
+                  decoration: BoxDecoration(
+                    color: Color(
+                      0xFFF2F2F2,
+                    ),
+                    border: Border.all(width: 0.0, color: Color(0xFFCFD8DC)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10.0),
+                            child: (Image(
+                              image: AssetImage("./assets/img4.jpg"),
+                              alignment: Alignment.center,
+                              width: 600,
+                            )),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            height: 20,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Mais de 16 mil doses de vacina foram",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF1565C0),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "aplicadas em Santa Rita",
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF1565C0),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Spacer(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "A vacinação contra a Covid-19 em Santa Rita continua avançando em números. Até este \n dia 01 de abril já foram aplicadas mais de 16 mil doses da vacina. \n\n A Secretaria de Saúde do município está realizando a imunização em cinco pontos fixos, \n no horário das 8h às 12h, e das 13h às 16h. São eles: PAM (centro), Barão do Abiay \n (Várzea Nova), Flávio Maroja (Alto das Populares), Padre Malagrida (Tibiri 2) e Marcos \n Moura 2 (Marcos Moura).",
+                            style:
+                                TextStyle(fontSize: 15, color: Colors.black54),
+                            textAlign: TextAlign.center,
+                          )
+                        ],
+                      ),
+                      Spacer(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            'Veja mais',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF1565C0),
+                            ),
+                          ),
+                          Icon(
+                            Icons.navigate_next_rounded,
+                            color: Color(0xFF1565C0),
+                            size: 24.0,
+                          ),
+                        ],
+                      ),
+                    ],
+                  )),
+              Container(
+                  height: MediaQuery.of(context).size.width / 2.8,
+                  width: MediaQuery.of(context).size.width / 2.5,
+                  margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
+                  alignment: Alignment(0.0, 0.0),
+                  padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
+                  //constraints: BoxConstraints.expand(height: 300),
+                  decoration: BoxDecoration(
+                    color: Color(
+                      0xFFF2F2F2,
+                    ),
+                    border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(10.0),
+                            child: (Image(
+                              image: AssetImage("./assets/img1.jpg"),
+                              alignment: Alignment.center,
+                              height: 535,
+                            )),
+                          )
+                        ],
+                      ),
+                    ],
+                  )),
+            ],
+          ),
         ],
       ),
     );
