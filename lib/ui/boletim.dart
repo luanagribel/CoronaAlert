@@ -10,11 +10,7 @@ class BoletimPage extends StatelessWidget {
 
     if (width < 590) {
       return numbersScreenPhone(context);
-    }
-    /* else if (width > 591 && width < 700) {
-      return homeScreenTablet(context);
-    } */
-    else if (width > 700) {
+    } else if (width > 700) {
       return numbersScreenDesktop(context);
     } else {
       return numbersScreenDesktop(context);

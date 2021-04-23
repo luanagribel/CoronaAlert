@@ -9,11 +9,7 @@ class InicioPage extends StatelessWidget {
 
     if (width < 590) {
       return homeScreenPhone(context);
-    }
-    /* else if (width > 591 && width < 700) {
-      return homeScreenTablet(context);
-    } */
-    else if (width > 700) {
+    } else if (width > 700) {
       return homeScreenDesktop(context);
     } else {
       return homeScreenDesktop(context);
@@ -39,7 +35,6 @@ class InicioPage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
               alignment: Alignment(0.0, 0.0),
-              //constraints: BoxConstraints.expand(height: 300),
               decoration: BoxDecoration(
                 color: Color(
                   0xFFF2F2F2,
@@ -79,7 +74,6 @@ class InicioPage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
               alignment: Alignment(0.0, 0.0),
-              //constraints: BoxConstraints.expand(height: 300),
               decoration: BoxDecoration(
                 color: Color(
                   0xFFF2F2F2,
@@ -119,7 +113,6 @@ class InicioPage extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
             alignment: Alignment(0.0, 0.0),
-            //constraints: BoxConstraints.expand(height: 300),
             decoration: BoxDecoration(
               color: Color(
                 0xFFF2F2F2,
@@ -142,7 +135,6 @@ class InicioPage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
               alignment: Alignment(0.0, 0.0),
-              //constraints: BoxConstraints.expand(height: 300),
               decoration: BoxDecoration(
                 color: Color(
                   0xFFF2F2F2,
@@ -206,7 +198,6 @@ class InicioPage extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(40.0, 0.0, 20.0, 5.0),
                   alignment: Alignment(0.0, 0.0),
                   padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
-                  //constraints: BoxConstraints.expand(height: 300),
                   decoration: BoxDecoration(
                     color: Color(
                       0xFFF2F2F2,
@@ -302,7 +293,6 @@ class InicioPage extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
                   alignment: Alignment(0.0, 0.0),
                   padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
-                  //constraints: BoxConstraints.expand(height: 300),
                   decoration: BoxDecoration(
                     color: Color(
                       0xFFF2F2F2,
@@ -402,7 +392,6 @@ class InicioPage extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(40.0, 0.0, 20.0, 5.0),
                   alignment: Alignment(0.0, 0.0),
                   padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
-                  //constraints: BoxConstraints.expand(height: 300),
                   decoration: BoxDecoration(
                     color: Color(
                       0xFFF2F2F2,
@@ -498,7 +487,6 @@ class InicioPage extends StatelessWidget {
                   margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
                   alignment: Alignment(0.0, 0.0),
                   padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
-                  //constraints: BoxConstraints.expand(height: 300),
                   decoration: BoxDecoration(
                     color: Color(
                       0xFFF2F2F2,

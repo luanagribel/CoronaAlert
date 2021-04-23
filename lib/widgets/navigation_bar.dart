@@ -23,8 +23,6 @@ class _NavigationBarState extends State<NavigationBar> {
 
     if (width < 590) {
       return menuScreenPhone(context);
-    } else if (width > 591 && width < 700) {
-      return menuScreenTablet(context);
     } else if (width > 700) {
       return menuScreenDesktop(context);
     } else {
@@ -88,121 +86,8 @@ class _NavigationBarState extends State<NavigationBar> {
     );
   }
 
-  //TESTAR COM EMULADOR PARA DEFINIR OS ESTILOS
-  Container menuScreenTablet(BuildContext context) {
-    return Container(
-      width: 60,
-      height: MediaQuery.of(context).size.height * 0.5,
-      color: Color(0xFF808080).withOpacity(0.5),
-      child: Column(
-        children: [
-          Row(
-            children: [
-              Padding(
-                  padding: const EdgeInsets.only(top: 10.0),
-                  child: Column(children: [
-                    TextButton(
-                      style: TextButton.styleFrom(
-                        primary: Colors.black,
-                        onSurface: Colors.blue,
-                      ),
-                      onPressed: () => {
-                        navKey.currentState.pushNamed('/inicio'),
-                      },
-                      child: Column(
-                        children: [
-                          FaIcon(
-                            FontAwesomeIcons.home,
-                            size: 19,
-                            color: Colors.blue,
-                          ),
-                          Text(
-                            "Home Page",
-                            style: TextStyle(fontSize: 10),
-                          )
-                        ],
-                      ),
-                    ),
-                    Divider(),
-                    TextButton(
-                      style: TextButton.styleFrom(
-                        primary: Colors.black,
-                        onSurface: Colors.blue,
-                      ),
-                      onPressed: () => {
-                        navKey.currentState.pushNamed('/boletim'),
-                      },
-                      child: Column(
-                        children: [
-                          FaIcon(
-                            FontAwesomeIcons.virus,
-                            size: 19,
-                            color: Colors.blue,
-                          ),
-                          Text(
-                            "Boletim COVID-19: Números",
-                            style: TextStyle(fontSize: 10),
-                          )
-                        ],
-                      ),
-                    ),
-                    Divider(),
-                    TextButton(
-                      style: TextButton.styleFrom(
-                        primary: Colors.black,
-                        onSurface: Colors.blue,
-                      ),
-                      onPressed: () => {
-                        navKey.currentState.pushNamed('/calendario'),
-                      },
-                      child: Column(
-                        children: [
-                          FaIcon(
-                            FontAwesomeIcons.calendar,
-                            size: 19,
-                            color: Colors.blue,
-                          ),
-                          Text(
-                            "Calendário de Vacinação",
-                            style: TextStyle(fontSize: 10),
-                          )
-                        ],
-                      ),
-                    ),
-                    Divider(),
-                    TextButton(
-                      style: TextButton.styleFrom(
-                        primary: Colors.black,
-                        onSurface: Colors.blue,
-                      ),
-                      onPressed: () => {
-                        navKey.currentState.pushNamed('/whatsapp'),
-                      },
-                      child: Column(
-                        children: [
-                          FaIcon(
-                            FontAwesomeIcons.whatsapp,
-                            size: 19,
-                            color: Colors.blue,
-                          ),
-                          Text(
-                            "Whatsapp",
-                            style: TextStyle(fontSize: 10),
-                          )
-                        ],
-                      ),
-                    ),
-                  ]))
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-
   Container menuScreenDesktop(BuildContext context) {
     return Container(
-      //margin: EdgeInsets.only(top: 0, right: 10),
       alignment: Alignment.centerLeft,
       width: 200,
       height: MediaQuery.of(context).size.height,
