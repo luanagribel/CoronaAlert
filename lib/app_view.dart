@@ -1,3 +1,4 @@
+import 'package:coronasrs/routes/routes.dart';
 import 'package:flutter/material.dart';
 
 import 'widgets/navigation_bar.dart';
@@ -28,14 +29,14 @@ class _AppViewState extends State<AppView> {
             leading: Builder(builder: (BuildContext context) {
               return IconButton(
                 icon: const Icon(Icons.menu),
-                onPressed: () {},
+                onPressed: () => showMenuOptions(),
               );
             }),
             title: Text("CoronaAlert"),
             actions: <Widget>[
               IconButton(
                 icon: Icon(Icons.mail_outline_outlined),
-                onPressed: () {},
+                onPressed: () => navKey.currentState.pushNamed('/faleconosco'),
               )
             ]),
         body: Row(

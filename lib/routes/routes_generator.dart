@@ -3,6 +3,7 @@ import 'package:coronasrs/ui/inicio.dart';
 import 'package:coronasrs/ui/boletim.dart';
 import 'package:coronasrs/ui/calendario.dart';
 import 'package:coronasrs/ui/whatsapp.dart';
+import 'package:coronasrs/ui/faleconosco.dart';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,9 @@ class RouteGenerator {
         break;
       case routeWhatsapp:
         return MaterialPageRoute(builder: (_) => WhatsappPage());
+        break;
+      case routeFaleConosco:
+        return MaterialPageRoute(builder: (_) => FaleConoscoPage());
         break;
     }
   }
