@@ -21,16 +21,10 @@ class _NavigationBarState extends State<NavigationBar> {
       print(width);
     });
 
-    if (width < 590) {
-      return menuScreenPhone(context);
-    } else if (width > 700) {
-      return menuScreenDesktop(context);
-    } else {
-      return menuScreenDesktop(context);
-    }
+    return menuScreen(context);
   }
 
-  Container menuScreenPhone(BuildContext context) {
+  Container menuScreen(BuildContext context) {
     return Container(
       width: 50,
       height: MediaQuery.of(context).size.height,
@@ -84,121 +78,5 @@ class _NavigationBarState extends State<NavigationBar> {
         ],
       ),
     );
-  }
-
-  Container menuScreenDesktop(BuildContext context) {
-    return Container(
-      alignment: Alignment.centerLeft,
-      width: 200,
-      height: MediaQuery.of(context).size.height,
-      color: Colors.grey.withOpacity(0.4),
-      child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            Row(children: [
-              SizedBox(
-                width: 10,
-              ),
-              NavigationItem(
-                selected: index == 0,
-                title: 'home',
-                routeName: routeInicio,
-                onHighlight: onHighlight,
-              ),
-              SizedBox(
-                width: 100,
-              ),
-              Icon(
-                Icons.navigate_next_rounded,
-                size: 20,
-                color: Colors.green,
-              ),
-            ]),
-            Divider(),
-            Row(children: [
-              SizedBox(
-                width: 10,
-              ),
-              NavigationItem(
-                selected: index == 1,
-                title: 'boletim',
-                routeName: routeBoletim,
-                onHighlight: onHighlight,
-              ),
-              SizedBox(
-                width: 85,
-              ),
-              Icon(
-                Icons.navigate_next_rounded,
-                size: 20,
-                color: Colors.green,
-              ),
-            ]),
-            Divider(),
-            Row(children: [
-              SizedBox(
-                width: 10,
-              ),
-              NavigationItem(
-                selected: index == 2,
-                title: 'vacinação',
-                routeName: routeCalendario,
-                onHighlight: onHighlight,
-              ),
-              SizedBox(
-                width: 63,
-              ),
-              Icon(
-                Icons.navigate_next_rounded,
-                size: 20,
-                color: Colors.green,
-              ),
-            ]),
-            Divider(),
-            Row(children: [
-              SizedBox(
-                width: 10,
-              ),
-              NavigationItem(
-                selected: index == 3,
-                title: 'whatsapp',
-                routeName: routeWhatsapp,
-                onHighlight: onHighlight,
-              ),
-              SizedBox(
-                width: 64,
-              ),
-              Icon(
-                Icons.navigate_next_rounded,
-                size: 20,
-                color: Colors.green,
-              ),
-            ]),
-          ]),
-    );
-  }
-
-  void onHighlight(String route) {
-    switch (route) {
-      case routeInicio:
-        changeHighlight(0);
-        break;
-      case routeBoletim:
-        changeHighlight(1);
-        break;
-      case routeCalendario:
-        changeHighlight(2);
-        break;
-      case routeWhatsapp:
-        changeHighlight(3);
-        break;
-    }
-  }
-
-  void changeHighlight(int newIndex) {
-    setState(() {
-      index = newIndex;
-    });
   }
 }

@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class Graficos extends StatefulWidget {
+class GraficosPage extends StatefulWidget {
   final Widget child;
 
-  Graficos({Key key, this.child}) : super(key: key);
+  GraficosPage({Key key, this.child}) : super(key: key);
 
   _GraficosState createState() => _GraficosState();
 }
 
-class _GraficosState extends State<Graficos> {
+class _GraficosState extends State<GraficosPage> {
   List<charts.Series<Data, String>> _seriesData;
   List<charts.Series<Line, int>> _seriesLineData;
 

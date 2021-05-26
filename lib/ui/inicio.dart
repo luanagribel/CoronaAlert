@@ -7,9 +7,9 @@ class InicioPage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     double width = size.width > size.height ? size.height : size.width;
 
-    if (width < 590) {
+    if (width < 722) {
       return homeScreenPhone(context);
-    } else if (width > 700) {
+    } else if (width > 722) {
       return homeScreenDesktop(context);
     } else {
       return homeScreenDesktop(context);
@@ -17,9 +17,10 @@ class InicioPage extends StatelessWidget {
   }
 
   Scaffold homeScreenPhone(BuildContext context) {
-    Color baseColor = Color(0xFFF2F2F2);
+    Color baseColor = Colors.white;
 
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       body: ListView(
         children: [
           Container(
@@ -179,6 +180,7 @@ class InicioPage extends StatelessWidget {
     Color baseColor = Color(0xFFF2F2F2);
 
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       body: ListView(
         children: [
           Container(
@@ -195,7 +197,7 @@ class InicioPage extends StatelessWidget {
               Container(
                   height: MediaQuery.of(context).size.width / 2.8,
                   width: MediaQuery.of(context).size.width / 2.5,
-                  margin: EdgeInsets.fromLTRB(40.0, 0.0, 20.0, 5.0),
+                  margin: EdgeInsets.fromLTRB(80.0, 0.0, 80.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
                   padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
                   decoration: BoxDecoration(
@@ -290,7 +292,7 @@ class InicioPage extends StatelessWidget {
               Container(
                   height: MediaQuery.of(context).size.width / 2.8,
                   width: MediaQuery.of(context).size.width / 2.5,
-                  margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
+                  margin: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
                   padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
                   decoration: BoxDecoration(
@@ -389,7 +391,7 @@ class InicioPage extends StatelessWidget {
               Container(
                   height: MediaQuery.of(context).size.width / 2.8,
                   width: MediaQuery.of(context).size.width / 2.5,
-                  margin: EdgeInsets.fromLTRB(40.0, 0.0, 20.0, 5.0),
+                  margin: EdgeInsets.fromLTRB(80.0, 0.0, 80.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
                   padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
                   decoration: BoxDecoration(
@@ -484,7 +486,7 @@ class InicioPage extends StatelessWidget {
               Container(
                   height: MediaQuery.of(context).size.width / 2.8,
                   width: MediaQuery.of(context).size.width / 2.5,
-                  margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
+                  margin: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
                   padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
                   decoration: BoxDecoration(

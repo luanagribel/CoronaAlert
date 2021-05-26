@@ -8,9 +8,9 @@ class BoletimPage extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     double width = size.width > size.height ? size.height : size.width;
 
-    if (width < 590) {
+    if (width < 722) {
       return numbersScreenPhone(context);
-    } else if (width > 700) {
+    } else if (width > 722) {
       return numbersScreenDesktop(context);
     } else {
       return numbersScreenDesktop(context);
@@ -176,151 +176,159 @@ class BoletimPage extends StatelessWidget {
             backgroundColor: Colors.green,
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return Graficos();
+                return GraficosPage();
               }));
             }));
   }
 
   Scaffold numbersScreenDesktop(BuildContext context) {
-    Color baseColor = Color(0xFFF2F2F2);
+    Color baseColor = Colors.white;
     var appBar = AppBar();
 
     return Scaffold(
-      body: ListView(
-        children: [
-          Container(
-            width: MediaQuery.of(context).size.width,
-            margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 40.0),
-            color: baseColor,
-            child: Image(
-              image: AssetImage("./assets/bannerboletim1.png"),
-              fit: BoxFit.cover,
-            ),
-          ),
-          Row(children: [
-            SizedBox(
-              width: 180,
-            ),
+        backgroundColor: Colors.grey[200],
+        body: ListView(
+          children: [
             Container(
-              child: Text(
-                'Número de Infectados',
+              width: MediaQuery.of(context).size.width,
+              margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 40.0),
+              color: baseColor,
+              child: Image(
+                image: AssetImage("./assets/bannerboletim1.png"),
+                fit: BoxFit.cover,
+              ),
+            ),
+            Row(children: [
+              SizedBox(
+                width: 250,
+              ),
+              Container(
+                child: Text(
+                  'Número de Infectados',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green,
+                  ),
+                ),
+              ),
+              SizedBox(
+                width: 200,
+              ),
+              Container(
+                  child: Text(
+                'Número de Óbitos',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Colors.green,
+                  color: Colors.black,
                 ),
+              )),
+              SizedBox(
+                width: 210,
               ),
-            ),
-            SizedBox(
-              width: 200,
-            ),
-            Container(
-                child: Text(
-              'Número de Óbitos',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
-              ),
-            )),
-            SizedBox(
-              width: 210,
-            ),
-            Container(
-                child: Text(
-              'Taxa de Mortalidade',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.red,
-              ),
-            ))
-          ]),
-          Row(children: [
-            Container(
-              margin: EdgeInsets.fromLTRB(150.0, 10.0, 0.0, 0.0),
-              height: (MediaQuery.of(context).size.height -
-                      appBar.preferredSize.height) /
-                  12,
-              width: MediaQuery.of(context).size.width / 6,
-              decoration: BoxDecoration(
-                color: Color(
-                  0xFFF2F2F2,
+              Container(
+                  child: Text(
+                'Taxa de Mortalidade',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.red,
                 ),
-                border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    '193',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green,
-                    ),
+              ))
+            ]),
+            Row(children: [
+              Container(
+                margin: EdgeInsets.fromLTRB(220.0, 10.0, 0.0, 0.0),
+                height: (MediaQuery.of(context).size.height -
+                        appBar.preferredSize.height) /
+                    12,
+                width: MediaQuery.of(context).size.width / 6,
+                decoration: BoxDecoration(
+                  color: Color(
+                    0xFFF2F2F2,
                   ),
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.fromLTRB(130.0, 10.0, 0.0, 0.0),
-              height: (MediaQuery.of(context).size.height -
-                      appBar.preferredSize.height) /
-                  12,
-              width: MediaQuery.of(context).size.width / 6,
-              decoration: BoxDecoration(
-                color: Color(
-                  0xFFF2F2F2,
+                  border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+                  borderRadius: BorderRadius.circular(10),
                 ),
-                border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    '34',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '193',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.green,
+                      ),
                     ),
-                  ),
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.fromLTRB(120.0, 10.0, 0.0, 0.0),
-              height: (MediaQuery.of(context).size.height -
-                      appBar.preferredSize.height) /
-                  12,
-              width: MediaQuery.of(context).size.width / 6,
-              decoration: BoxDecoration(
-                color: Color(
-                  0xFFF2F2F2,
+                  ],
                 ),
-                border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
-                borderRadius: BorderRadius.circular(10),
               ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    '2%',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.red,
-                    ),
+              Container(
+                margin: EdgeInsets.fromLTRB(130.0, 10.0, 0.0, 0.0),
+                height: (MediaQuery.of(context).size.height -
+                        appBar.preferredSize.height) /
+                    12,
+                width: MediaQuery.of(context).size.width / 6,
+                decoration: BoxDecoration(
+                  color: Color(
+                    0xFFF2F2F2,
                   ),
-                ],
+                  border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '34',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ],
+                ),
               ),
-            )
-          ]),
-        ],
-      ),
-    );
+              Container(
+                margin: EdgeInsets.fromLTRB(120.0, 10.0, 0.0, 0.0),
+                height: (MediaQuery.of(context).size.height -
+                        appBar.preferredSize.height) /
+                    12,
+                width: MediaQuery.of(context).size.width / 6,
+                decoration: BoxDecoration(
+                  color: Color(
+                    0xFFF2F2F2,
+                  ),
+                  border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '2%',
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red,
+                      ),
+                    ),
+                  ],
+                ),
+              )
+            ]),
+          ],
+        ),
+        floatingActionButton: FloatingActionButton(
+            child: Icon(Icons.bar_chart),
+            backgroundColor: Colors.green,
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return GraficosPage();
+              }));
+            }));
   }
 }

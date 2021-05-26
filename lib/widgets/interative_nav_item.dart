@@ -47,11 +47,9 @@ class _InteractiveTextState extends State<InteractiveText> {
     Size size = MediaQuery.of(context).size;
     double width = size.width > size.height ? size.height : size.width;
 
-    if (width < 590) {
+    if (width < 722) {
       return estiloFontePhone();
-    } else if (width > 591 && width < 700) {
-      return estiloFontePhone();
-    } else if (width > 700) {
+    } else if (width > 722) {
       return estiloFonte();
     } else {
       return estiloFonte();

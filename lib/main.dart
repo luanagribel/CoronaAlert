@@ -16,12 +16,13 @@ class MyApp extends StatelessWidget {
       title: 'CoronaAlert',
       theme: ThemeData(
         primaryColor: Colors.green,
+        scaffoldBackgroundColor: Color(0xFFF2F2F2),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       builder: (_, child) => AppView(child: child),
       initialRoute: routeInicio,
       navigatorKey: navKey,
-      onGenerateRoute: RouteGenerator.generatorRoute,
+      onGenerateRoute: RouteGenerator.generateRoute,
     );
   }
 }
