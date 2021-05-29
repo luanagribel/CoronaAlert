@@ -5,7 +5,7 @@ const conexao = require('../infra/conexao')
 
 class Contato{
     adiciona(contato,res){
-        const dataEnvio = moment().format('YYYY-MM-DD HH:mm:ss')
+      //  const dataEnvio = moment().format('YYYY-MM-DD HH:mm:ss')
         const nomeEhValido = contato.nome.length >= 3
 
         const validacoes = [
@@ -22,7 +22,7 @@ class Contato{
         if(existemErros){
             res.status(400).json(erros)
         }else{
-            const contatoDatado = {...contato, dataEnvio}
+            const contatoDatado = {...contato}
             const sql = 'INSERT INTO Contatos SET ?'
 
             conexao.query(sql, contatoDatado, (erro, resultados) => {

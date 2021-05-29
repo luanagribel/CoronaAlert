@@ -16,18 +16,18 @@ class _GraficosState extends State<GraficosPage> {
 
   _generateData() {
     var data1 = [
-      new Data('Casos', 30),
-      new Data('Mortes', 40),
-      new Data('Recuperados', 10),
+      Data('Casos', 30),
+      Data('Mortes', 40),
+      Data('Recuperados', 10),
     ];
 
     var linedata = [
-      new Line(0, 45),
-      new Line(1, 56),
-      new Line(2, 55),
-      new Line(3, 60),
-      new Line(4, 61),
-      new Line(5, 70),
+      Line(0, 45),
+      Line(1, 56),
+      Line(2, 55),
+      Line(3, 60),
+      Line(4, 61),
+      Line(5, 70),
     ];
 
     _seriesData.add(
@@ -128,17 +128,17 @@ class _GraficosState extends State<GraficosPage> {
                         ),
                         Expanded(
                           child: charts.LineChart(_seriesLineData,
-                              defaultRenderer: new charts.LineRendererConfig(
+                              defaultRenderer: charts.LineRendererConfig(
                                   includeArea: true, stacked: true),
                               animate: true,
                               animationDuration: Duration(seconds: 3),
                               behaviors: [
-                                new charts.ChartTitle('Meses',
+                                charts.ChartTitle('Meses',
                                     behaviorPosition:
                                         charts.BehaviorPosition.bottom,
                                     titleOutsideJustification: charts
                                         .OutsideJustification.middleDrawArea),
-                                new charts.ChartTitle('%',
+                                charts.ChartTitle('%',
                                     behaviorPosition:
                                         charts.BehaviorPosition.start,
                                     titleOutsideJustification: charts

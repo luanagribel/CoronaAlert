@@ -5,7 +5,7 @@ class Tabelas{
     }
 
     criarContatos(){
-        const sql = 'CREATE TABLE IF NOT EXISTS Contatos (id int NOT NULL AUTO_INCREMENT, nome varchar(50) NOT NULL, email varchar(50), mensagem text, dataEnvio datetime NOT NULL, PRIMARY KEY(id))'
+        const sql = 'CREATE TABLE IF NOT EXISTS Contatos (id int NOT NULL AUTO_INCREMENT, nome varchar(50) NOT NULL, email varchar(50), mensagem text, PRIMARY KEY(id))'
 
         this.conexao.query(sql, erro => {
             if(erro){
