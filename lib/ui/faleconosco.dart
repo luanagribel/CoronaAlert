@@ -76,6 +76,7 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
         FractionallySizedBox(
           widthFactor: 0.8,
           child: TextField(
+            key: Key('nameTextField'),
             controller: nameController,
             obscureText: false,
             decoration: InputDecoration(

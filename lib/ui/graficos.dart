@@ -16,9 +16,9 @@ class _GraficosState extends State<GraficosPage> {
 
   _generateData() {
     var data1 = [
-      Data('Casos', 30),
-      Data('Mortes', 40),
-      Data('Recuperados', 10),
+      Data('Casos', 40),
+      Data('Recuperados', 30),
+      Data('Mortes', 10),
     ];
 
     var linedata = [

@@ -20,6 +20,7 @@ class CalendarioPage extends StatelessWidget {
     Color baseColor = Colors.white;
 
     return Scaffold(
+      key: Key('AgoraVai'),
       backgroundColor: Colors.grey[200],
       body: ListView(
         children: [

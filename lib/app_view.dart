@@ -35,6 +35,7 @@ class _AppViewState extends State<AppView> {
             title: Text("CoronaAlert"),
             actions: <Widget>[
               IconButton(
+                key: Key('FaleConoscoButton'),
                 icon: Icon(Icons.mail_outline_outlined),
                 onPressed: () => navKey.currentState.pushNamed('/faleconosco'),
               )

@@ -67,14 +67,6 @@ class _NavigationBarState extends State<NavigationBar> {
           Divider(
             color: Colors.blue,
           ),
-          IconButton(
-            icon: new FaIcon(
-              FontAwesomeIcons.whatsapp,
-              size: 25,
-              color: Colors.blue[100],
-            ),
-            onPressed: () => navKey.currentState.pushNamed('/whatsapp'),
-          ),
         ],
       ),
     );
