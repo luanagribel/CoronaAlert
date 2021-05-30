@@ -20,6 +20,15 @@ class InicioPage extends StatelessWidget {
   Scaffold homeScreenPhone(BuildContext context) {
     Color baseColor = Colors.white;
 
+    Future<void> openURL() async {
+      const url = 'https://pmsrs.mg.gov.br';
+      if (await canLaunch(url)) {
+        await launch(url);
+      } else {
+        /// Não è possível abrir a URL
+      }
+    }
+
     return Scaffold(
       backgroundColor: Colors.grey[200],
       body: ListView(
@@ -37,6 +46,7 @@ class InicioPage extends StatelessWidget {
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
               alignment: Alignment(0.0, 0.0),
+              padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
               decoration: BoxDecoration(
                 color: Color(
                   0xFFF2F2F2,
@@ -54,27 +64,37 @@ class InicioPage extends StatelessWidget {
                   ),
                   Text(
                     "Alunos se adaptam a aulas remotas durante a pandemia",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Color(0xFF1565C0),
                     ),
                   ),
-                  Row(
-                    children: [
-                      SizedBox(width: MediaQuery.of(context).size.width / 1.5),
-                      Icon(
-                        Icons.navigate_next_rounded,
-                        color: Color(0xFF1565C0),
-                        size: 36.0,
-                      ),
-                    ],
+                  SizedBox(
+                    height: 10,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      openURL();
+                    },
+                    child: Wrap(
+                      alignment: WrapAlignment.end,
+                      children: [
+                        Icon(
+                          Icons.navigate_next_rounded,
+                          color: Color(0xFF1565C0),
+                          size: 36.0,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               )),
           Container(
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
+              padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
               alignment: Alignment(0.0, 0.0),
               decoration: BoxDecoration(
                 color: Color(
@@ -93,27 +113,37 @@ class InicioPage extends StatelessWidget {
                   ),
                   Text(
                     "Santa Rita atinge 99,1% de eficácia na aplicação da 1ª dose da vacina contra Covid-19",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Color(0xFF1565C0),
                     ),
                   ),
-                  Row(
-                    children: [
-                      SizedBox(width: MediaQuery.of(context).size.width / 1.5),
-                      Icon(
-                        Icons.navigate_next_rounded,
-                        color: Color(0xFF1565C0),
-                        size: 36.0,
-                      ),
-                    ],
+                  SizedBox(
+                    height: 10,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      openURL();
+                    },
+                    child: Wrap(
+                      alignment: WrapAlignment.end,
+                      children: [
+                        Icon(
+                          Icons.navigate_next_rounded,
+                          color: Color(0xFF1565C0),
+                          size: 36.0,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               )),
           Container(
             width: MediaQuery.of(context).size.width,
             margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
+            padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
             alignment: Alignment(0.0, 0.0),
             decoration: BoxDecoration(
               color: Color(
@@ -136,6 +166,7 @@ class InicioPage extends StatelessWidget {
           Container(
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
+              padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
               alignment: Alignment(0.0, 0.0),
               decoration: BoxDecoration(
                 color: Color(
@@ -154,21 +185,30 @@ class InicioPage extends StatelessWidget {
                   ),
                   Text(
                     "Mais de 16 mil doses de vacina foram aplicadas em Santa Rita",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Color(0xFF1565C0),
                     ),
                   ),
-                  Row(
-                    children: [
-                      SizedBox(width: MediaQuery.of(context).size.width / 1.5),
-                      Icon(
-                        Icons.navigate_next_rounded,
-                        color: Color(0xFF1565C0),
-                        size: 36.0,
-                      ),
-                    ],
+                  SizedBox(
+                    height: 10,
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      openURL();
+                    },
+                    child: Wrap(
+                      alignment: WrapAlignment.end,
+                      children: [
+                        Icon(
+                          Icons.navigate_next_rounded,
+                          color: Color(0xFF1565C0),
+                          size: 36.0,
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               )),
