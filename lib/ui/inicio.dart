@@ -247,11 +247,11 @@ class InicioPage extends StatelessWidget {
             spacing: 2,
             children: [
               Container(
-                  height: MediaQuery.of(context).size.width / 2.7,
+                  height: MediaQuery.of(context).size.width / 2.6,
                   width: MediaQuery.of(context).size.width / 2.3,
                   margin: EdgeInsets.fromLTRB(0.0, 0.0, 80.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
-                  padding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 20.0),
+                  padding: EdgeInsets.fromLTRB(25.0, 20.0, 25.0, 20.0),
                   decoration: BoxDecoration(
                     color: Color(
                       0xFFF2F2F2,
@@ -274,89 +274,67 @@ class InicioPage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            height: 20,
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Alunos se adaptam a aulas remotas",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF1565C0),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "durante a pandemia",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF1565C0),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Spacer(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Mesmo com as dificuldades enfrentadas, com conexões, adaptação às aulas por vídeos \n e plataformas novas de ensino na internet, os estudantes paraibanos, e em especial os \n de Santa Rita, estão aprovando o método on-line de continuar os estudos sem parar \n durante a Pandemia de coronavírus. Recentemente, a Paraíba foi avaliada em primeiro \n lugar no Brasil na realização de aulas remotas.",
-                            style:
-                                TextStyle(fontSize: 15, color: Colors.black54),
-                            textAlign: TextAlign.center,
-                          )
-                        ],
-                      ),
                       SizedBox(
                         height: 20,
                       ),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          GestureDetector(
-                              onTap: () {
-                                openURL();
-                              },
-                              child: Wrap(
-                                children: [
-                                  Text(
-                                    'Veja mais',
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      color: Color(0xFF1565C0),
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.navigate_next_rounded,
-                                    color: Color(0xFF1565C0),
-                                    size: 24.0,
-                                  ),
-                                ],
-                              )),
+                          Text(
+                            "Alunos se adaptam a aulas remotas \ndurante a pandemia",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              color: Color(0xFF1565C0),
+                            ),
+                          ),
                         ],
+                      ),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      Text(
+                        "Mesmo com as dificuldades enfrentadas, com conexões, adaptação às aulas por vídeos e plataformas novas de ensino na internet, os estudantes paraibanos, e em especial os de Santa Rita, estão aprovando o método on-line de continuar os estudos sem parar durante a Pandemia de coronavírus. Recentemente, a Paraíba foi avaliada em primeiro lugar no Brasil na realização de aulas remotas.",
+                        style: TextStyle(fontSize: 15, color: Colors.black54),
+                        textAlign: TextAlign.justify,
+                      ),
+                      SizedBox(
+                        height: 45,
+                      ),
+                      Align(
+                        alignment: Alignment.bottomRight,
+                        child: GestureDetector(
+                          onTap: () {
+                            openURL();
+                          },
+                          child: Wrap(
+                            children: [
+                              Text(
+                                'Veja mais',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: Color(0xFF1565C0),
+                                ),
+                              ),
+                              Icon(
+                                Icons.navigate_next_rounded,
+                                color: Color(0xFF1565C0),
+                                size: 24.0,
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   )),
               Container(
-                  height: MediaQuery.of(context).size.width / 2.7,
+                  height: MediaQuery.of(context).size.width / 2.6,
                   width: MediaQuery.of(context).size.width / 2.3,
                   margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
-                  padding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 20.0),
+                  padding: EdgeInsets.fromLTRB(25.0, 20.0, 25.0, 20.0),
                   decoration: BoxDecoration(
                     color: Color(
                       0xFFF2F2F2,
@@ -379,54 +357,28 @@ class InicioPage extends StatelessWidget {
                           )
                         ],
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            height: 20,
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Santa Rita atinge 99,1% de eficácia na aplicação",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF1565C0),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "da 1ª dose da vacina contra Covid-19",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF1565C0),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Spacer(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "A campanha de vacinação contra a Covid-19 segue avançando em Santa Rita, com \n imunização sendo realizada de segunda a sábado em sete pontos espalhados pelo \n município. De acordo com dados atualizados da Secretaria de Saúde nesta quinta-feira \n (08), 99,1% das vacinas recebidas para a primeira dose já foram aplicadas, assim como \n 51,17% das destinadas à segunda dose.",
-                            style:
-                                TextStyle(fontSize: 15, color: Colors.black54),
-                            textAlign: TextAlign.center,
-                          )
-                        ],
-                      ),
                       SizedBox(
                         height: 20,
+                      ),
+                      Text(
+                        "Santa Rita atinge 99,1% de eficácia na aplicação da 1ª dose da vacina contra Covid-19",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF1565C0),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      Text(
+                        "A campanha de vacinação contra a Covid-19 segue avançando em Santa Rita, com imunização sendo realizada de segunda a sábado em sete pontos espalhados pelo município. De acordo com dados atualizados da Secretaria de Saúde nesta quinta-feira (08), 99,1% das vacinas recebidas para a primeira dose já foram aplicadas, assim como 51,17% das destinadas à segunda dose.",
+                        style: TextStyle(fontSize: 15, color: Colors.black54),
+                        textAlign: TextAlign.justify,
+                      ),
+                      SizedBox(
+                        height: 40,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -473,11 +425,11 @@ class InicioPage extends StatelessWidget {
             spacing: 2,
             children: [
               Container(
-                  height: MediaQuery.of(context).size.width / 2.6,
+                  height: MediaQuery.of(context).size.width / 2.7,
                   width: MediaQuery.of(context).size.width / 2.3,
                   margin: EdgeInsets.fromLTRB(0.0, 0.0, 80.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
-                  padding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 20.0),
+                  padding: EdgeInsets.fromLTRB(25.0, 20.0, 25.0, 20.0),
                   decoration: BoxDecoration(
                     color: Color(
                       0xFFF2F2F2,
@@ -500,90 +452,62 @@ class InicioPage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SizedBox(
-                            height: 20,
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "Mais de 16 mil doses de vacina foram",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF1565C0),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "aplicadas em Santa Rita",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF1565C0),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Spacer(),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            "A vacinação contra a Covid-19 em Santa Rita continua avançando em números. Até este \n dia 01 de abril já foram aplicadas mais de 16 mil doses da vacina. \n\n A Secretaria de Saúde do município está realizando a imunização em cinco pontos fixos, \n no horário das 8h às 12h, e das 13h às 16h. São eles: PAM (centro), Barão do Abiay \n (Várzea Nova), Flávio Maroja (Alto das Populares), Padre Malagrida (Tibiri 2) e Marcos \n Moura 2 (Marcos Moura).",
-                            style:
-                                TextStyle(fontSize: 15, color: Colors.black54),
-                            textAlign: TextAlign.center,
-                          )
-                        ],
-                      ),
                       SizedBox(
                         height: 20,
                       ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          GestureDetector(
-                            onTap: () {
-                              openURL();
-                            },
-                            child: Wrap(
-                              children: [
-                                Text(
-                                  'Veja mais',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0xFF1565C0),
-                                  ),
-                                ),
-                                Icon(
-                                  Icons.navigate_next_rounded,
+                      Text(
+                        "Mais de 16 mil doses de vacina foram aplicadas em Santa Rita",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Color(0xFF1565C0),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 25,
+                      ),
+                      Text(
+                        "A vacinação contra a Covid-19 em Santa Rita continua avançando em números. Até este dia 01 de abril já foram aplicadas mais de 16 mil doses da vacina. A Secretaria de Saúde do município está realizando a imunização em cinco pontos fixos, no horário das 8h às 12h, e das 13h às 16h. São eles: PAM (centro), Barão do Abiay (Várzea Nova), Flávio Maroja (Alto das Populares), Padre Malagrida (Tibiri 2) e Marcos Moura 2 (Marcos Moura).",
+                        style: TextStyle(fontSize: 15, color: Colors.black54),
+                        textAlign: TextAlign.justify,
+                      ),
+                      SizedBox(
+                        height: 50,
+                      ),
+                      Align(
+                        alignment: Alignment.bottomRight,
+                        child: GestureDetector(
+                          onTap: () {
+                            openURL();
+                          },
+                          child: Wrap(
+                            children: [
+                              Text(
+                                'Veja mais',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
                                   color: Color(0xFF1565C0),
-                                  size: 24.0,
                                 ),
-                              ],
-                            ),
+                              ),
+                              Icon(
+                                Icons.navigate_next_rounded,
+                                color: Color(0xFF1565C0),
+                                size: 24.0,
+                              ),
+                            ],
                           ),
-                        ],
+                        ),
                       ),
                     ],
                   )),
               Container(
-                  height: MediaQuery.of(context).size.width / 2.6,
+                  height: MediaQuery.of(context).size.width / 2.7,
                   width: MediaQuery.of(context).size.width / 2.3,
                   margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
-                  padding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 20.0),
+                  padding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 15.0),
                   decoration: BoxDecoration(
                     color: Color(
                       0xFFF2F2F2,
@@ -601,7 +525,7 @@ class InicioPage extends StatelessWidget {
                             child: (Image(
                               image: AssetImage("./assets/img1.jpg"),
                               alignment: Alignment.center,
-                              height: 535,
+                              height: 520,
                             )),
                           )
                         ],

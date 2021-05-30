@@ -53,6 +53,7 @@ class CalendarioPage extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width,
             margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
+            padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
             alignment: Alignment(0.0, 0.0),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -72,6 +73,7 @@ class CalendarioPage extends StatelessWidget {
               ),
               Text(
                 "Foi o município quem determinou a ordem dos grupos a serem vacinados?",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -79,7 +81,7 @@ class CalendarioPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Align(
                 alignment: Alignment.centerLeft,
@@ -99,6 +101,7 @@ class CalendarioPage extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width,
             margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
+            padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
             alignment: Alignment(0.0, 0.0),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -118,6 +121,7 @@ class CalendarioPage extends StatelessWidget {
               ),
               Text(
                 "Qual o grupo prioritário em que estamos hoje no município?",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -125,42 +129,12 @@ class CalendarioPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "Grupo de comorbidades: Pessoas com Síndrome de Down (todos acima de 18 anos)",
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "Renal crônico: Que faz hemodiálise e diálise (todos acima de 18 anos)",
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "Demais Comorbidades: de 59 a 55 anos.",
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.black,
-                  ),
-                ),
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "(Grupo em anexo. Pessoas com deficiência cadastradas no BPC: de 59 a 55 anos.)",
+                  "Grupo de comorbidades: Pessoas com Síndrome de Down (todos acima de 18 anos)\nRenal crônico: Que faz hemodiálise e diálise (todos acima de 18 anos)\nDemais Comorbidades: de 59 a 55 anos.\n(Grupo em anexo. Pessoas com deficiência cadastradas no BPC: de 59 a 55 anos.)",
                   style: TextStyle(
                     fontSize: 14,
                     color: Colors.black,
@@ -189,6 +163,7 @@ class CalendarioPage extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width,
             margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
+            padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
             alignment: Alignment(0.0, 0.0),
             decoration: BoxDecoration(
               color: Colors.white,
@@ -208,6 +183,7 @@ class CalendarioPage extends StatelessWidget {
               ),
               Text(
                 "Como posso realizar o agendamento para os idosos acima de 60 – 64?",
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -215,7 +191,7 @@ class CalendarioPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Align(
                 alignment: Alignment.centerLeft,
@@ -355,37 +331,7 @@ class CalendarioPage extends StatelessWidget {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      "Grupo de comorbidades: Pessoas com Síndrome de Down (todos acima de 18 anos)",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Renal crônico: Que faz hemodiálise e diálise (todos acima de 18 anos)",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Demais Comorbidades: de 59 a 55 anos.",
-                      style: TextStyle(
-                        fontSize: 18,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "(Grupo em anexo. Pessoas com deficiência cadastradas no BPC: de 59 a 55 anos.)",
+                      "Grupo de comorbidades: Pessoas com Síndrome de Down (todos acima de 18 anos)\nRenal crônico: Que faz hemodiálise e diálise (todos acima de 18 anos)\nDemais Comorbidades: de 59 a 55 anos.\n(Grupo em anexo. Pessoas com deficiência cadastradas no BPC: de 59 a 55 anos.)",
                       style: TextStyle(
                         fontSize: 18,
                         color: Colors.black,
@@ -448,15 +394,8 @@ class CalendarioPage extends StatelessWidget {
                     height: 60,
                   ),
                   Text(
-                    "Dados fornecidos pela Secretaria de Saúde - Santa Rita do Sapucaí",
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    "Informações (3471-5609 - 3471-2006)",
+                    "Dados fornecidos pela Secretaria de Saúde - Santa Rita do Sapucaí\nInformações (3471-5609 - 3471-2006)",
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 16,
                       color: Colors.black,
