@@ -1,5 +1,6 @@
 import 'package:coronasrs/constants/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class InicioPage extends StatelessWidget {
   @override
@@ -179,6 +180,15 @@ class InicioPage extends StatelessWidget {
   Scaffold homeScreenDesktop(BuildContext context) {
     Color baseColor = Color(0xFFF2F2F2);
 
+    Future<void> openURL() async {
+      const url = 'https://pmsrs.mg.gov.br';
+      if (await canLaunch(url)) {
+        await launch(url);
+      } else {
+        /// Não è possível abrir a URL
+      }
+    }
+
     return Scaffold(
       backgroundColor: Colors.grey[200],
       body: ListView(
@@ -192,14 +202,16 @@ class InicioPage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          Row(
+          Wrap(
+            alignment: WrapAlignment.center,
+            spacing: 2,
             children: [
               Container(
-                  height: MediaQuery.of(context).size.width / 2.8,
-                  width: MediaQuery.of(context).size.width / 2.5,
-                  margin: EdgeInsets.fromLTRB(80.0, 0.0, 80.0, 10.0),
+                  height: MediaQuery.of(context).size.width / 2.7,
+                  width: MediaQuery.of(context).size.width / 2.3,
+                  margin: EdgeInsets.fromLTRB(0.0, 0.0, 80.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
-                  padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
+                  padding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 20.0),
                   decoration: BoxDecoration(
                     color: Color(
                       0xFFF2F2F2,
@@ -268,33 +280,43 @@ class InicioPage extends StatelessWidget {
                           )
                         ],
                       ),
-                      Spacer(),
+                      SizedBox(
+                        height: 20,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text(
-                            'Veja mais',
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF1565C0),
-                            ),
-                          ),
-                          Icon(
-                            Icons.navigate_next_rounded,
-                            color: Color(0xFF1565C0),
-                            size: 24.0,
-                          ),
+                          GestureDetector(
+                              onTap: () {
+                                openURL();
+                              },
+                              child: Wrap(
+                                children: [
+                                  Text(
+                                    'Veja mais',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFF1565C0),
+                                    ),
+                                  ),
+                                  Icon(
+                                    Icons.navigate_next_rounded,
+                                    color: Color(0xFF1565C0),
+                                    size: 24.0,
+                                  ),
+                                ],
+                              )),
                         ],
                       ),
                     ],
                   )),
               Container(
-                  height: MediaQuery.of(context).size.width / 2.8,
-                  width: MediaQuery.of(context).size.width / 2.5,
-                  margin: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 10.0),
+                  height: MediaQuery.of(context).size.width / 2.7,
+                  width: MediaQuery.of(context).size.width / 2.3,
+                  margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
-                  padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
+                  padding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 20.0),
                   decoration: BoxDecoration(
                     color: Color(
                       0xFFF2F2F2,
@@ -363,22 +385,42 @@ class InicioPage extends StatelessWidget {
                           )
                         ],
                       ),
-                      Spacer(),
+                      SizedBox(
+                        height: 20,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text(
-                            'Veja mais',
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF1565C0),
+                          GestureDetector(
+                            onTap: () {
+                              openURL();
+                            },
+                            child: Wrap(
+                              children: [
+                                GestureDetector(
+                                  onTap: () {
+                                    openURL();
+                                  },
+                                  child: Wrap(
+                                    children: [
+                                      Text(
+                                        'Veja mais',
+                                        style: TextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold,
+                                          color: Color(0xFF1565C0),
+                                        ),
+                                      ),
+                                      Icon(
+                                        Icons.navigate_next_rounded,
+                                        color: Color(0xFF1565C0),
+                                        size: 24.0,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
-                          Icon(
-                            Icons.navigate_next_rounded,
-                            color: Color(0xFF1565C0),
-                            size: 24.0,
                           ),
                         ],
                       ),
@@ -386,14 +428,16 @@ class InicioPage extends StatelessWidget {
                   )),
             ],
           ),
-          Row(
+          Wrap(
+            alignment: WrapAlignment.center,
+            spacing: 2,
             children: [
               Container(
-                  height: MediaQuery.of(context).size.width / 2.8,
-                  width: MediaQuery.of(context).size.width / 2.5,
-                  margin: EdgeInsets.fromLTRB(80.0, 0.0, 80.0, 10.0),
+                  height: MediaQuery.of(context).size.width / 2.6,
+                  width: MediaQuery.of(context).size.width / 2.3,
+                  margin: EdgeInsets.fromLTRB(0.0, 0.0, 80.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
-                  padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
+                  padding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 20.0),
                   decoration: BoxDecoration(
                     color: Color(
                       0xFFF2F2F2,
@@ -462,33 +506,44 @@ class InicioPage extends StatelessWidget {
                           )
                         ],
                       ),
-                      Spacer(),
+                      SizedBox(
+                        height: 20,
+                      ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text(
-                            'Veja mais',
-                            style: TextStyle(
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFF1565C0),
+                          GestureDetector(
+                            onTap: () {
+                              openURL();
+                            },
+                            child: Wrap(
+                              children: [
+                                Text(
+                                  'Veja mais',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xFF1565C0),
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.navigate_next_rounded,
+                                  color: Color(0xFF1565C0),
+                                  size: 24.0,
+                                ),
+                              ],
                             ),
-                          ),
-                          Icon(
-                            Icons.navigate_next_rounded,
-                            color: Color(0xFF1565C0),
-                            size: 24.0,
                           ),
                         ],
                       ),
                     ],
                   )),
               Container(
-                  height: MediaQuery.of(context).size.width / 2.8,
-                  width: MediaQuery.of(context).size.width / 2.5,
-                  margin: EdgeInsets.fromLTRB(20.0, 0.0, 0.0, 10.0),
+                  height: MediaQuery.of(context).size.width / 2.6,
+                  width: MediaQuery.of(context).size.width / 2.3,
+                  margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
-                  padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
+                  padding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 20.0),
                   decoration: BoxDecoration(
                     color: Color(
                       0xFFF2F2F2,
