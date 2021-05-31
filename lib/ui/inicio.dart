@@ -124,6 +124,7 @@ class InicioPage extends StatelessWidget {
                     height: 10,
                   ),
                   GestureDetector(
+                    key: Key('onTap'),
                     onTap: () {
                       openURL();
                     },

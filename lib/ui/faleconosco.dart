@@ -58,12 +58,13 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
         ),
         Container(
           width: MediaQuery.of(context).size.width,
-          margin: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 40.0),
+          margin: EdgeInsets.fromLTRB(40.0, 0.0, 20.0, 40.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 'Preencha os campos abaixo para nos enviar dúvidas ou sugestões:',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -93,6 +94,7 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
         FractionallySizedBox(
           widthFactor: 0.8,
           child: TextField(
+            key: Key('emailTextField'),
             controller: mailController,
             obscureText: false,
             decoration: InputDecoration(
@@ -109,12 +111,14 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
         FractionallySizedBox(
           widthFactor: 0.8,
           child: TextField(
+            key: Key('msgTextField'),
             controller: msgController,
             obscureText: false,
             decoration: InputDecoration(
-              contentPadding: const EdgeInsets.symmetric(vertical: 40.0),
+              contentPadding:
+                  const EdgeInsets.only(top: 40.0, bottom: 40.0, left: 10),
               border: OutlineInputBorder(),
-              labelText: '  Mensagem',
+              labelText: 'Mensagem',
               fillColor: Colors.grey[300],
               filled: true,
             ),
