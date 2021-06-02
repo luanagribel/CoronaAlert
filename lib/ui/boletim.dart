@@ -198,128 +198,143 @@ class BoletimPage extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
             ),
-            Row(children: [
-              SizedBox(
-                width: 250,
-              ),
-              Container(
-                child: Text(
-                  'Número de Infectados',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.green,
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: 200,
-              ),
-              Container(
-                  child: Text(
-                'Número de Óbitos',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              )),
-              SizedBox(
-                width: 210,
-              ),
-              Container(
-                  child: Text(
-                'Taxa de Mortalidade',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.red,
-                ),
-              ))
-            ]),
-            Row(children: [
-              Container(
-                margin: EdgeInsets.fromLTRB(220.0, 10.0, 0.0, 0.0),
-                height: (MediaQuery.of(context).size.height -
-                        appBar.preferredSize.height) /
-                    12,
-                width: MediaQuery.of(context).size.width / 6,
-                decoration: BoxDecoration(
-                  color: Color(
-                    0xFFF2F2F2,
-                  ),
-                  border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      '193',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.green,
+            Wrap(
+              spacing: 160,
+              alignment: WrapAlignment.center,
+              children: [
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Número de Infectados',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.green,
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.fromLTRB(130.0, 10.0, 0.0, 0.0),
-                height: (MediaQuery.of(context).size.height -
-                        appBar.preferredSize.height) /
-                    12,
-                width: MediaQuery.of(context).size.width / 6,
-                decoration: BoxDecoration(
-                  color: Color(
-                    0xFFF2F2F2,
-                  ),
-                  border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      '34',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                      Container(
+                        margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                        // padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
+                        height: (MediaQuery.of(context).size.height -
+                                appBar.preferredSize.height) /
+                            12,
+                        width: MediaQuery.of(context).size.width / 6,
+                        decoration: BoxDecoration(
+                          color: Color(
+                            0xFFF2F2F2,
+                          ),
+                          border:
+                              Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '193',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.green,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.fromLTRB(120.0, 10.0, 0.0, 0.0),
-                height: (MediaQuery.of(context).size.height -
-                        appBar.preferredSize.height) /
-                    12,
-                width: MediaQuery.of(context).size.width / 6,
-                decoration: BoxDecoration(
-                  color: Color(
-                    0xFFF2F2F2,
+                    ],
                   ),
-                  border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
-                  borderRadius: BorderRadius.circular(10),
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      '2%',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.red,
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Número de Óbitos',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
                       ),
-                    ),
-                  ],
+                      Container(
+                        margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                        height: (MediaQuery.of(context).size.height -
+                                appBar.preferredSize.height) /
+                            12,
+                        width: MediaQuery.of(context).size.width / 6,
+                        decoration: BoxDecoration(
+                          color: Color(
+                            0xFFF2F2F2,
+                          ),
+                          border:
+                              Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '34',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              )
-            ]),
+                Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Taxa de Mortalidade',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red,
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                        height: (MediaQuery.of(context).size.height -
+                                appBar.preferredSize.height) /
+                            12,
+                        width: MediaQuery.of(context).size.width / 6,
+                        decoration: BoxDecoration(
+                          color: Color(
+                            0xFFF2F2F2,
+                          ),
+                          border:
+                              Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '2%',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.red,
+                              ),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
         floatingActionButton: FloatingActionButton(
