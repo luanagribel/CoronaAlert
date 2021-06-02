@@ -19,11 +19,9 @@ class NavigationItem extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     double width = size.width > size.height ? size.height : size.width;
 
-    if (width < 590) {
+    if (width < 722) {
       return gestureMenuPhone();
-    } else if (width > 591 && width < 700) {
-      return gestureMenuTablet();
-    } else if (width > 700) {
+    } else if (width > 722) {
       return gestureMenuDesktop();
     } else {
       return gestureMenuDesktop();
@@ -31,23 +29,6 @@ class NavigationItem extends StatelessWidget {
   }
 
   GestureDetector gestureMenuPhone() {
-    return GestureDetector(
-      onTap: () {
-        navKey.currentState.pushNamed(routeName);
-        onHighlight(routeName);
-      },
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 20.0),
-        child: InteractiveNavItem(
-          text: title,
-          routeName: routeName,
-          selected: selected,
-        ),
-      ),
-    );
-  }
-
-  GestureDetector gestureMenuTablet() {
     return GestureDetector(
       onTap: () {
         navKey.currentState.pushNamed(routeName);

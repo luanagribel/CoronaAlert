@@ -66,7 +66,7 @@ class CalendarioPage extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Icon(
                   Icons.contact_support,
-                  color: Colors.blue[700],
+                  color: Color(0x17202A).withOpacity(0.8),
                 ),
               ),
               SizedBox(
@@ -78,7 +78,7 @@ class CalendarioPage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF1565C0),
+                  color: Color(0x17202A).withOpacity(0.8),
                 ),
               ),
               SizedBox(
@@ -114,7 +114,7 @@ class CalendarioPage extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Icon(
                   Icons.contact_support,
-                  color: Colors.blue[700],
+                  color: Color(0x17202A).withOpacity(0.8),
                 ),
               ),
               SizedBox(
@@ -126,7 +126,7 @@ class CalendarioPage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF1565C0),
+                  color: Color(0x17202A).withOpacity(0.8),
                 ),
               ),
               SizedBox(
@@ -176,7 +176,7 @@ class CalendarioPage extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Icon(
                   Icons.contact_support,
-                  color: Colors.blue[700],
+                  color: Color(0x17202A).withOpacity(0.8),
                 ),
               ),
               SizedBox(
@@ -188,7 +188,7 @@ class CalendarioPage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
-                  color: Color(0xFF1565C0),
+                  color: Color(0x17202A).withOpacity(0.8),
                 ),
               ),
               SizedBox(
@@ -270,7 +270,7 @@ class CalendarioPage extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Icon(
                       Icons.contact_support,
-                      color: Colors.blue[700],
+                      color: Color(0x17202A).withOpacity(0.8),
                       size: 36,
                     ),
                   ),
@@ -284,7 +284,7 @@ class CalendarioPage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xFF1565C0),
+                        color: Color(0x17202A).withOpacity(0.8),
                       ),
                     ),
                   ),
@@ -308,7 +308,7 @@ class CalendarioPage extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Icon(
                       Icons.contact_support,
-                      color: Colors.blue[700],
+                      color: Color(0x17202A).withOpacity(0.8),
                       size: 36,
                     ),
                   ),
@@ -322,7 +322,7 @@ class CalendarioPage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xFF1565C0),
+                        color: Color(0x17202A).withOpacity(0.8),
                       ),
                     ),
                   ),
@@ -360,7 +360,7 @@ class CalendarioPage extends StatelessWidget {
                     alignment: Alignment.centerLeft,
                     child: Icon(
                       Icons.contact_support,
-                      color: Colors.blue[700],
+                      color: Color(0x17202A).withOpacity(0.8),
                       size: 36,
                     ),
                   ),
@@ -374,7 +374,7 @@ class CalendarioPage extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
-                        color: Color(0xFF1565C0),
+                        color: Color(0x17202A).withOpacity(0.8),
                       ),
                     ),
                   ),

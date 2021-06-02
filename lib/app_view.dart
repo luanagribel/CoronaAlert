@@ -24,22 +24,47 @@ class _AppViewState extends State<AppView> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    double width = size.width > size.height ? size.height : size.width;
+
+    if (width < 722) {
+      return appViewPhone(context);
+    } else if (width > 722) {
+      return appViewDesktop(context);
+    } else {
+      return appViewDesktop(context);
+    }
+  }
+
+  Scaffold appViewPhone(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(actions: <Widget>[
+          IconButton(
+            key: Key('FaleConoscoButton'),
+            icon: Icon(
+              Icons.mail_outline_outlined,
+              color: Colors.blue[100],
+            ),
+            onPressed: () => navKey.currentState.pushNamed('/faleconosco'),
+          )
+        ]),
+        body: Column(
+            //crossAxisAlignment: CrossAxisAlignment.start,
+            //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(child: widget.child),
+              Visibility(
+                visible: _isVisible,
+                child: NavigationBar(),
+              ),
+            ]));
+  }
+
+  Scaffold appViewDesktop(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-            leading: Builder(builder: (BuildContext context) {
-              return IconButton(
-                icon: const Icon(Icons.menu),
-                onPressed: () => showMenuOptions(),
-              );
-            }),
-            title: Text("CoronaAlert"),
-            actions: <Widget>[
-              IconButton(
-                key: Key('FaleConoscoButton'),
-                icon: Icon(Icons.mail_outline_outlined),
-                onPressed: () => navKey.currentState.pushNamed('/faleconosco'),
-              )
-            ]),
+          title: Text("CoronaAlert"),
+        ),
         body: Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

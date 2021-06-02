@@ -13,10 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'CoronaAlert',
       theme: ThemeData(
-        primaryColor: Colors.green,
-        scaffoldBackgroundColor: Color(0xFFF2F2F2),
+        primaryColor: Colors.black,
+        scaffoldBackgroundColor: Colors.black,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       builder: (_, child) => AppView(child: child),
