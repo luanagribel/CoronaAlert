@@ -145,18 +145,12 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
   }
 
   Scaffold FaleConoscoScreenDesk(BuildContext context) {
-    Color baseColor = Color(0xFFF2F2F2);
+    Color baseColor = Color(0xFF252525);
 
     return Scaffold(
         body: ListView(children: [
-      Container(
-        width: MediaQuery.of(context).size.width,
-        margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 50.0),
-        color: baseColor,
-        child: Image(
-          image: AssetImage("./assets/FaleConoscoDesk.png"),
-          fit: BoxFit.cover,
-        ),
+      SizedBox(
+        height: 200,
       ),
       Container(
         width: MediaQuery.of(context).size.width,
@@ -165,11 +159,11 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Preencha os campos abaixo para nos enviar dúvidas ou sugestões:',
+              'PREENCHA OS CAMPOS ABAIXO EM CASO DE DÚVIDAS OU SUGESTÕES:',
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 16,
                 fontWeight: FontWeight.bold,
-                color: Colors.lightBlue[900],
+                color: Color(0xFF03A688),
               ),
             ),
           ],
@@ -189,7 +183,9 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Nome Completo',
-                    fillColor: Colors.grey[300],
+                    labelStyle:
+                        TextStyle(color: Colors.grey[100], fontSize: 12),
+                    fillColor: baseColor,
                     filled: true,
                   ),
                 ),
@@ -205,7 +201,9 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     labelText: 'Email',
-                    fillColor: Colors.grey[300],
+                    labelStyle:
+                        TextStyle(color: Colors.grey[100], fontSize: 12),
+                    fillColor: baseColor,
                     filled: true,
                   ),
                 ),
@@ -224,11 +222,13 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
                     controller: msgController,
                     obscureText: false,
                     decoration: InputDecoration(
-                      contentPadding:
-                          const EdgeInsets.symmetric(vertical: 50.0),
+                      contentPadding: const EdgeInsets.only(
+                          top: 50.0, bottom: 50.0, left: 10),
                       border: OutlineInputBorder(),
-                      labelText: '  Mensagem',
-                      fillColor: Colors.grey[300],
+                      labelText: 'Mensagem',
+                      labelStyle:
+                          TextStyle(color: Colors.grey[100], fontSize: 12),
+                      fillColor: baseColor,
                       filled: true,
                     ),
                   ),
@@ -245,7 +245,7 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
         widthFactor: 0.1,
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            primary: Colors.lightBlue[900],
+            primary: Color(0xFF03A688),
           ),
           child: Text('Enviar'),
           onPressed: _createContato,
