@@ -238,7 +238,7 @@ class InicioPage extends StatelessWidget {
             height: 130,
           ),
           Container(
-            margin: EdgeInsets.only(left: 80),
+            margin: EdgeInsets.only(left: 140),
             child: Text(
               "ÚLTIMAS NOTÍCIAS",
               textAlign: TextAlign.left,
@@ -253,13 +253,13 @@ class InicioPage extends StatelessWidget {
             height: 20,
           ),
           Wrap(
-            alignment: WrapAlignment.center,
+            alignment: WrapAlignment.spaceEvenly,
             spacing: 2,
             children: [
               Container(
                   height: MediaQuery.of(context).size.width / 2.8,
-                  width: MediaQuery.of(context).size.width / 3,
-                  margin: EdgeInsets.fromLTRB(0.0, 0.0, 80.0, 10.0),
+                  width: MediaQuery.of(context).size.width / 2.9,
+                  margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
                   padding: EdgeInsets.fromLTRB(25.0, 20.0, 25.0, 20.0),
                   decoration: BoxDecoration(
@@ -345,7 +345,7 @@ class InicioPage extends StatelessWidget {
                   )),
               Container(
                   height: MediaQuery.of(context).size.width / 2.8,
-                  width: MediaQuery.of(context).size.width / 3,
+                  width: MediaQuery.of(context).size.width / 2.9,
                   margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
                   padding: EdgeInsets.fromLTRB(25.0, 20.0, 25.0, 20.0),
@@ -363,7 +363,7 @@ class InicioPage extends StatelessWidget {
                         color: Color(0xFF03A688),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 18,
                       ),
                       Text(
                         "SANTA RITA ATINGE 99,1% DE EFICÁCIA NA APLICAÇÃO DA 1ª DOSE DA VACINA CONTRA COVID-19",
@@ -375,7 +375,7 @@ class InicioPage extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 25,
+                        height: 15,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -441,8 +441,8 @@ class InicioPage extends StatelessWidget {
             children: [
               Container(
                   height: MediaQuery.of(context).size.width / 3.85,
-                  width: MediaQuery.of(context).size.width / 1.395,
-                  margin: EdgeInsets.fromLTRB(70.0, 0.0, 80.0, 10.0),
+                  width: MediaQuery.of(context).size.width / 1.285,
+                  margin: EdgeInsets.fromLTRB(80.0, 0.0, 80.0, 10.0),
                   alignment: Alignment(0.0, 0.0),
                   padding: EdgeInsets.fromLTRB(30.0, 20.0, 15.0, 20.0),
                   decoration: BoxDecoration(
@@ -455,7 +455,8 @@ class InicioPage extends StatelessWidget {
                   child: Column(
                     children: [
                       Wrap(
-                        alignment: WrapAlignment.spaceAround,
+                        alignment: WrapAlignment.spaceEvenly,
+                        spacing: 40,
                         children: [
                           Container(
                             margin: EdgeInsets.fromLTRB(0.0, 0.0, 80.0, 0.0),
@@ -464,7 +465,7 @@ class InicioPage extends StatelessWidget {
                               child: (Image(
                                 image: AssetImage("./assets/img4.jpg"),
                                 alignment: Alignment.center,
-                                width: 450,
+                                width: 480,
                               )),
                             ),
                           ),
@@ -478,7 +479,7 @@ class InicioPage extends StatelessWidget {
                                   color: Color(0xFF03A688),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 20,
                                 ),
                                 Text(
                                   "MAIS DE 16 MIL DOSES DE VACINA FORAM APLICADAS EM SANTA RITA",
@@ -499,7 +500,7 @@ class InicioPage extends StatelessWidget {
                                   textAlign: TextAlign.justify,
                                 ),
                                 SizedBox(
-                                  height: 130,
+                                  height: 110,
                                 ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.end,

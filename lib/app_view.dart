@@ -62,8 +62,21 @@ class _AppViewState extends State<AppView> {
 
   Scaffold appViewDesktop(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text("CoronaAlert"),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(60.0),
+          child: AppBar(
+            title: Container(
+              alignment: Alignment.center,
+              margin: EdgeInsets.fromLTRB(0, 0.0, 10.0, 0.0),
+              child: Image(
+                image: AssetImage("./assets/coronaalert.png"),
+                // fit: BoxFit.fitHeight
+                // width: 272,
+                height: 60,
+                //492 x 247
+              ),
+            ),
+          ),
         ),
         body: Row(
             crossAxisAlignment: CrossAxisAlignment.start,

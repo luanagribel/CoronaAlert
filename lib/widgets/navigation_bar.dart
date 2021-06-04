@@ -81,9 +81,10 @@ class _NavigationBarState extends State<NavigationBar> {
 
   Container menuScreenDesktop(BuildContext context) {
     return Container(
-      width: 280,
+      width: 70,
       height: MediaQuery.of(context).size.height,
-      margin: EdgeInsets.fromLTRB(0, 100, 0, 0),
+      margin: EdgeInsets.fromLTRB(0, 120, 0, 0),
+      padding: EdgeInsets.only(right: 15),
       decoration: BoxDecoration(
         color: Color(0x116B5B).withOpacity(0.3),
         border: Border.all(width: 0.0, color: Color(0x17202A).withOpacity(0.5)),
