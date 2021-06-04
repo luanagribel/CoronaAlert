@@ -18,8 +18,6 @@ class InicioPage extends StatelessWidget {
   }
 
   Scaffold homeScreenPhone(BuildContext context) {
-    Color baseColor = Colors.white;
-
     Future<void> openURL() async {
       const url = 'https://pmsrs.mg.gov.br';
       if (await canLaunch(url)) {
@@ -30,17 +28,26 @@ class InicioPage extends StatelessWidget {
     }
 
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Color(0xFF121212),
       body: ListView(
         children: [
+          SizedBox(
+            height: 50,
+          ),
           Container(
-            width: MediaQuery.of(context).size.width,
-            margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
-            color: baseColor,
-            child: Image(
-              image: AssetImage("./assets/banner.png"),
-              fit: BoxFit.cover,
+            margin: EdgeInsets.only(left: 10),
+            child: Text(
+              "ÚLTIMAS NOTÍCIAS",
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                fontSize: 16,
+                //fontWeight: FontWeight.bold,
+                color: Color(0xFF03A688),
+              ),
             ),
+          ),
+          SizedBox(
+            height: 10,
           ),
           Container(
               width: MediaQuery.of(context).size.width,
@@ -49,27 +56,43 @@ class InicioPage extends StatelessWidget {
               padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
               decoration: BoxDecoration(
                 color: Color(
-                  0xFFF2F2F2,
+                  0xFF252525,
                 ),
-                border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+                border: Border.all(
+                    width: 1.0,
+                    color: Color(
+                      0xFF252525,
+                    )),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Column(
                 children: [
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Icon(
+                    Icons.new_releases,
+                    color: Color(0xFF03A688),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    "ALUNOS SE ADAPTAM A AULAS REMOTAS DURANTE A PANDEMIA",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Color(0xFF03A688),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20.0),
                     child: (Image(
                       image: AssetImage("./assets/img2.jpg"),
                     )),
-                  ),
-                  Text(
-                    "Alunos se adaptam a aulas remotas durante a pandemia",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF1565C0),
-                    ),
                   ),
                   SizedBox(
                     height: 10,
@@ -83,7 +106,7 @@ class InicioPage extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.navigate_next_rounded,
-                          color: Color(0xFF1565C0),
+                          color: Color(0xFF03A688),
                           size: 36.0,
                         ),
                       ],
@@ -98,27 +121,43 @@ class InicioPage extends StatelessWidget {
               alignment: Alignment(0.0, 0.0),
               decoration: BoxDecoration(
                 color: Color(
-                  0xFFF2F2F2,
+                  0xFF252525,
                 ),
-                border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+                border: Border.all(
+                    width: 1.0,
+                    color: Color(
+                      0xFF252525,
+                    )),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Column(
                 children: [
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Icon(
+                    Icons.new_releases,
+                    color: Color(0xFF03A688),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    "SANTA RITA ATINGE 99,1% DE EFICÁCIA NA APLICAÇÃO DA 1ª DOSE DA VACINA CONTRA COVID-19",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Color(0xFF03A688),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20.0),
                     child: (Image(
                       image: AssetImage("./assets/img3.jpg"),
                     )),
-                  ),
-                  Text(
-                    "Santa Rita atinge 99,1% de eficácia na aplicação da 1ª dose da vacina contra Covid-19",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF1565C0),
-                    ),
                   ),
                   SizedBox(
                     height: 10,
@@ -133,7 +172,7 @@ class InicioPage extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.navigate_next_rounded,
-                          color: Color(0xFF1565C0),
+                          color: Color(0xFF03A688),
                           size: 36.0,
                         ),
                       ],
@@ -142,56 +181,49 @@ class InicioPage extends StatelessWidget {
                 ],
               )),
           Container(
-            width: MediaQuery.of(context).size.width,
-            margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
-            padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
-            alignment: Alignment(0.0, 0.0),
-            decoration: BoxDecoration(
-              color: Color(
-                0xFFF2F2F2,
-              ),
-              border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Column(
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(20.0),
-                  child: (Image(
-                    image: AssetImage("./assets/img1.jpg"),
-                  )),
-                ),
-              ],
-            ),
-          ),
-          Container(
               width: MediaQuery.of(context).size.width,
               margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
               padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
               alignment: Alignment(0.0, 0.0),
               decoration: BoxDecoration(
                 color: Color(
-                  0xFFF2F2F2,
+                  0xFF252525,
                 ),
-                border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+                border: Border.all(
+                    width: 1.0,
+                    color: Color(
+                      0xFF252525,
+                    )),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Column(
                 children: [
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Icon(
+                    Icons.new_releases,
+                    color: Color(0xFF03A688),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    "MAIS DE 16 MIL DOSES DE VACINA FORAM APLICADAS EM SANTA RITA",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Color(0xFF03A688),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20.0),
                     child: (Image(
                       image: AssetImage("./assets/img4.jpg"),
                     )),
-                  ),
-                  Text(
-                    "Mais de 16 mil doses de vacina foram aplicadas em Santa Rita",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF1565C0),
-                    ),
                   ),
                   SizedBox(
                     height: 10,
@@ -205,7 +237,7 @@ class InicioPage extends StatelessWidget {
                       children: [
                         Icon(
                           Icons.navigate_next_rounded,
-                          color: Color(0xFF1565C0),
+                          color: Color(0xFF03A688),
                           size: 36.0,
                         ),
                       ],

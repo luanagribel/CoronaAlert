@@ -38,16 +38,32 @@ class _AppViewState extends State<AppView> {
 
   Scaffold appViewPhone(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(actions: <Widget>[
-          IconButton(
-            key: Key('FaleConoscoButton'),
-            icon: Icon(
-              Icons.mail_outline_outlined,
-              color: Colors.blue[100],
-            ),
-            onPressed: () => navKey.currentState.pushNamed('/faleconosco'),
-          )
-        ]),
+        appBar: PreferredSize(
+          preferredSize: Size.fromHeight(60.0),
+          child: AppBar(
+              title: Container(
+                alignment: Alignment.topLeft,
+                // margin: EdgeInsets.fromLTRB(0, 0.0, 10.0, 0.0),
+                child: Image(
+                  image: AssetImage("./assets/coronaalert.png"),
+                  // fit: BoxFit.fitHeight
+                  // width: 272,
+                  height: 50,
+                  //492 x 247
+                ),
+              ),
+              actions: <Widget>[
+                IconButton(
+                  key: Key('FaleConoscoButton'),
+                  icon: Icon(
+                    Icons.mail_outline_outlined,
+                    color: Color(0xFF03A688),
+                  ),
+                  onPressed: () =>
+                      navKey.currentState.pushNamed('/faleconosco'),
+                )
+              ]),
+        ),
         body: Column(
             //crossAxisAlignment: CrossAxisAlignment.start,
             //mainAxisAlignment: MainAxisAlignment.spaceBetween,

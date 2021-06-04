@@ -17,29 +17,40 @@ class CalendarioPage extends StatelessWidget {
   }
 
   Scaffold calendScreenPhone(BuildContext context) {
-    Color baseColor = Colors.white;
-
+    Color baseColor = Color(
+      0xFF252525,
+    );
     return Scaffold(
       key: Key('Key'),
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Color(0xFF121212),
       body: ListView(
         children: [
+          SizedBox(
+            height: 50,
+          ),
           Container(
-            width: MediaQuery.of(context).size.width,
-            margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
-            color: baseColor,
-            child: Image(
-              image: AssetImage("./assets/calendMobile.png"),
-              fit: BoxFit.cover,
+            margin: EdgeInsets.only(left: 10),
+            child: Text(
+              "VACINÔMETRO",
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                fontSize: 16,
+                //fontWeight: FontWeight.bold,
+                color: Color(0xFF03A688),
+              ),
             ),
+          ),
+          SizedBox(
+            height: 10,
           ),
           Container(
             width: MediaQuery.of(context).size.width,
             margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
+            padding: EdgeInsets.all(10),
             alignment: Alignment(0.0, 0.0),
             decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(width: 1.0, color: Colors.white),
+              color: baseColor,
+              border: Border.all(width: 1.0, color: baseColor),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Column(children: [
@@ -51,46 +62,64 @@ class CalendarioPage extends StatelessWidget {
               ),
             ]),
           ),
+          SizedBox(
+            height: 30,
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 10),
+            child: Text(
+              "DÚVIDAS FREQUENTES",
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                fontSize: 16,
+                //fontWeight: FontWeight.bold,
+                color: Color(0xFF03A688),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
           Container(
             width: MediaQuery.of(context).size.width,
             margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
-            padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+            padding: EdgeInsets.fromLTRB(20, 10, 10, 10),
             alignment: Alignment(0.0, 0.0),
             decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(width: 1.0, color: Colors.white),
+              color: baseColor,
+              border: Border.all(width: 1.0, color: baseColor),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Column(children: [
               Align(
-                alignment: Alignment.centerLeft,
+                alignment: Alignment.center,
                 child: Icon(
                   Icons.contact_support,
-                  color: Color(0x17202A).withOpacity(0.8),
+                  color: Color(0xFF03A688),
                 ),
               ),
               SizedBox(
                 height: 16,
               ),
               Text(
-                "Foi o município quem determinou a ordem dos grupos a serem vacinados?",
+                "FOI O MUNICÍPIO QUEM DETERMINOU A ORDEM DOS GRUPOS A SEREM VACINADOS?",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0x17202A).withOpacity(0.8),
+                  fontSize: 16,
+                  color: Color(0xFF03A688),
                 ),
               ),
               SizedBox(
                 height: 20,
               ),
               Align(
-                alignment: Alignment.centerLeft,
+                alignment: Alignment.center,
                 child: Text(
                   "Não, os grupos prioritários e a ordem em que eles serão vacinados foram definidos pelo Ministério da Saúde, e pela Secretaria do Estado de Saúde de Minas Gerais, por meio da Deliberação CIB-SUS/MG 3314, de 29 de janeiro de 2021.",
+                  textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontSize: 14,
-                    color: Colors.black,
+                    color: Colors.grey[100],
                   ),
                 ),
               ),
@@ -102,31 +131,30 @@ class CalendarioPage extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width,
             margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
-            padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+            padding: EdgeInsets.fromLTRB(20, 10, 10, 10),
             alignment: Alignment(0.0, 0.0),
             decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(width: 1.0, color: Colors.white),
+              color: baseColor,
+              border: Border.all(width: 1.0, color: baseColor),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Column(children: [
               Align(
-                alignment: Alignment.centerLeft,
+                alignment: Alignment.center,
                 child: Icon(
                   Icons.contact_support,
-                  color: Color(0x17202A).withOpacity(0.8),
+                  color: Color(0xFF03A688),
                 ),
               ),
               SizedBox(
                 height: 16,
               ),
               Text(
-                "Qual o grupo prioritário em que estamos hoje no município?",
+                "QUAL O GRUPO PRIORITÁRIO EM QUE ESTAMOS HOJE NO MUNICÍPIO?",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0x17202A).withOpacity(0.8),
+                  fontSize: 16,
+                  color: Color(0xFF03A688),
                 ),
               ),
               SizedBox(
@@ -136,9 +164,10 @@ class CalendarioPage extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "Grupo de comorbidades: Pessoas com Síndrome de Down (todos acima de 18 anos)\nRenal crônico: Que faz hemodiálise e diálise (todos acima de 18 anos)\nDemais Comorbidades: de 59 a 55 anos.\n(Grupo em anexo. Pessoas com deficiência cadastradas no BPC: de 59 a 55 anos.)",
+                  textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontSize: 14,
-                    color: Colors.black,
+                    color: Colors.grey[100],
                   ),
                 ),
               ),
@@ -152,7 +181,7 @@ class CalendarioPage extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                    color: Colors.grey[100],
                   ),
                 ),
               ),
@@ -164,31 +193,30 @@ class CalendarioPage extends StatelessWidget {
           Container(
             width: MediaQuery.of(context).size.width,
             margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
-            padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+            padding: EdgeInsets.fromLTRB(20, 10, 10, 10),
             alignment: Alignment(0.0, 0.0),
             decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(width: 1.0, color: Colors.white),
+              color: baseColor,
+              border: Border.all(width: 1.0, color: baseColor),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Column(children: [
               Align(
-                alignment: Alignment.centerLeft,
+                alignment: Alignment.center,
                 child: Icon(
                   Icons.contact_support,
-                  color: Color(0x17202A).withOpacity(0.8),
+                  color: Color(0xFF03A688),
                 ),
               ),
               SizedBox(
                 height: 16,
               ),
               Text(
-                "Como posso realizar o agendamento para os idosos acima de 60 – 64?",
+                "COMO POSSO REALIZAR O AGENDAMENTO PARA OS IDOSOS ACIMA DE 60 – 64?",
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0x17202A).withOpacity(0.8),
+                  fontSize: 16,
+                  color: Color(0xFF03A688),
                 ),
               ),
               SizedBox(
@@ -198,9 +226,10 @@ class CalendarioPage extends StatelessWidget {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   "Caso algum idoso nesta faixa de idade ainda não tenha recebido a vacina, solicitamos que a família, ou amigos procurem o Posto de Saúde em que o idoso for registrado, ou o posto mais próximo, de acordo com seu bairro para saber quais os horários disponíveis e se a vacina será feita em domicílio, ou não.",
+                  textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontSize: 14,
-                    color: Colors.black,
+                    color: Colors.grey[100],
                   ),
                 ),
               ),

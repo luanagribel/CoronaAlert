@@ -18,33 +18,42 @@ class BoletimPage extends StatelessWidget {
   }
 
   Scaffold numbersScreenPhone(BuildContext context) {
-    Color baseColor = Color(0xFFF2F2F2);
+    Color baseColor = Color(0xFF252525);
     var appBar = AppBar();
 
     return Scaffold(
         body: ListView(
           children: [
+            SizedBox(
+              height: 70,
+            ),
             Container(
-              width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 40.0),
-              color: baseColor,
-              child: Image(
-                image: AssetImage("./assets/bannerboletim.png"),
-                fit: BoxFit.cover,
+              margin: EdgeInsets.only(left: 10),
+              child: Text(
+                "BOLETIM EPIDEMIOLÓGICO",
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  fontSize: 16,
+                  //fontWeight: FontWeight.bold,
+                  color: Color(0xFF03A688),
+                ),
               ),
+            ),
+            SizedBox(
+              height: 50,
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 20.0),
+              margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Número de Infectados',
+                    'NÚMERO DE INFECTADOS',
                     style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.green,
+                      fontSize: 18,
+                      //fontWeight: FontWeight.bold,
+                      color: Color(0xFF03A688),
                     ),
                   ),
                 ],
@@ -53,15 +62,15 @@ class BoletimPage extends StatelessWidget {
             FractionallySizedBox(
               widthFactor: 0.5,
               child: Container(
-                margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 30.0),
+                margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 40.0),
                 height: (MediaQuery.of(context).size.height -
                         appBar.preferredSize.height) /
                     12,
                 decoration: BoxDecoration(
                   color: Color(
-                    0xFFF2F2F2,
+                    0xFF252525,
                   ),
-                  border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+                  border: Border.all(width: 1.0, color: Color(0xFF252525)),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(
@@ -69,10 +78,7 @@ class BoletimPage extends StatelessWidget {
                   children: [
                     Text(
                       '193',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.green),
+                      style: TextStyle(fontSize: 20, color: Colors.grey[100]),
                     ),
                   ],
                 ),
@@ -80,16 +86,16 @@ class BoletimPage extends StatelessWidget {
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 20.0),
+              margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Número de Óbitos',
+                    'NÚMERO DE ÓBITOS',
                     style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
+                      fontSize: 18,
+                      //fontWeight: FontWeight.bold,
+                      color: Color(0xFF03A688),
                     ),
                   ),
                 ],
@@ -98,15 +104,15 @@ class BoletimPage extends StatelessWidget {
             FractionallySizedBox(
               widthFactor: 0.5,
               child: Container(
-                margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 30.0),
+                margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 40.0),
                 height: (MediaQuery.of(context).size.height -
                         appBar.preferredSize.height) /
                     12,
                 decoration: BoxDecoration(
                   color: Color(
-                    0xFFF2F2F2,
+                    0xFF252525,
                   ),
-                  border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+                  border: Border.all(width: 1.0, color: Color(0xFF252525)),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(
@@ -114,10 +120,7 @@ class BoletimPage extends StatelessWidget {
                   children: [
                     Text(
                       '34',
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
+                      style: TextStyle(fontSize: 20, color: Colors.grey[100]),
                     ),
                   ],
                 ),
@@ -125,16 +128,16 @@ class BoletimPage extends StatelessWidget {
             ),
             Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 20.0),
+              margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Taxa de Mortalidade',
+                    'TAXA DE MORTALIDADE',
                     style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.red,
+                      fontSize: 18,
+                      //fontWeight: FontWeight.bold,
+                      color: Color(0xFF03A688),
                     ),
                   ),
                 ],
@@ -149,9 +152,9 @@ class BoletimPage extends StatelessWidget {
                     12,
                 decoration: BoxDecoration(
                   color: Color(
-                    0xFFF2F2F2,
+                    0xFF252525,
                   ),
-                  border: Border.all(width: 1.0, color: Color(0xFFCFD8DC)),
+                  border: Border.all(width: 1.0, color: Color(0xFF252525)),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Column(
@@ -161,8 +164,7 @@ class BoletimPage extends StatelessWidget {
                       '2%',
                       style: TextStyle(
                         fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.red,
+                        color: Colors.grey[100],
                       ),
                     ),
                   ],
@@ -173,7 +175,7 @@ class BoletimPage extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
             child: Icon(Icons.bar_chart),
-            backgroundColor: Colors.green,
+            backgroundColor: Color(0xFF03A688),
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return GraficosPage();

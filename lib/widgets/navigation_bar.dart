@@ -37,7 +37,7 @@ class _NavigationBarState extends State<NavigationBar> {
         Container(
           width: MediaQuery.of(context).size.width,
           height: 50,
-          color: Color(0x17202A).withOpacity(0.8),
+          color: Color(0x116B5B).withOpacity(0.3),
           child: Wrap(
             alignment: WrapAlignment.center,
             spacing: 65,
@@ -47,7 +47,7 @@ class _NavigationBarState extends State<NavigationBar> {
                   icon: new FaIcon(
                     FontAwesomeIcons.home,
                     size: 25,
-                    color: Colors.blue[100],
+                    color: Colors.grey[100],
                   ),
                   onPressed: () => navKey.currentState.pushNamed('/inicio'),
                 ),
@@ -57,7 +57,7 @@ class _NavigationBarState extends State<NavigationBar> {
                   icon: new FaIcon(
                     FontAwesomeIcons.virus,
                     size: 25,
-                    color: Colors.blue[100],
+                    color: Colors.grey[100],
                   ),
                   onPressed: () => navKey.currentState.pushNamed('/boletim'),
                 ),
@@ -67,7 +67,7 @@ class _NavigationBarState extends State<NavigationBar> {
                   icon: new FaIcon(
                     FontAwesomeIcons.calendar,
                     size: 25,
-                    color: Colors.blue[100],
+                    color: Colors.grey[100],
                   ),
                   onPressed: () => navKey.currentState.pushNamed('/calendario'),
                 ),
