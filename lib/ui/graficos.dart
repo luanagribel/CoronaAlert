@@ -46,7 +46,7 @@ class _GraficosState extends State<GraficosPage> {
 
     _seriesLineData.add(
       charts.Series(
-        colorFn: (__, _) => charts.ColorUtil.fromDartColor(Colors.blue[700]),
+        colorFn: (__, _) => charts.ColorUtil.fromDartColor(Colors.red[200]),
         id: 'Taxa',
         data: linedata,
         domainFn: (Line line, _) => line.mes,
@@ -113,7 +113,7 @@ class _GraficosState extends State<GraficosPage> {
                           'COMPARAÇÃO \n\n',
                           style: TextStyle(
                             fontSize: 20.0,
-                            color: Color(0xFF03A688),
+                            color: Colors.white,
                           ),
                         ),
                         Expanded(
@@ -158,13 +158,24 @@ class _GraficosState extends State<GraficosPage> {
               Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Container(
+                  padding: EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    color: Color(
+                      0xFF252525,
+                    ),
+                    border: Border.all(
+                        width: 1.0,
+                        color: Color(
+                          0xFF252525,
+                        )),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                   child: Center(
                     child: Column(
                       children: <Widget>[
                         Text(
-                          'Mortalidade \n\n',
-                          style: TextStyle(
-                              fontSize: 24.0, fontWeight: FontWeight.bold),
+                          'MORTALIDADE \n\n',
+                          style: TextStyle(fontSize: 20.0, color: Colors.white),
                         ),
                         Expanded(
                           child: charts.LineChart(_seriesLineData,
@@ -172,13 +183,43 @@ class _GraficosState extends State<GraficosPage> {
                                   includeArea: true, stacked: true),
                               animate: true,
                               animationDuration: Duration(seconds: 3),
+                              domainAxis: new charts.NumericAxisSpec(
+                                renderSpec: charts.GridlineRendererSpec(
+                                  labelStyle: new charts.TextStyleSpec(
+                                      fontSize: 18, // size in Pts.
+                                      color: charts.MaterialPalette.white),
+                                  /* lineStyle: charts.LineStyleSpec(
+                                      color: charts.MaterialPalette.white,
+                                      thickness: 1,
+                                    )*/
+                                ),
+                              ),
+                              primaryMeasureAxis: new charts.NumericAxisSpec(
+                                  renderSpec: new charts.GridlineRendererSpec(
+                                // Tick and Label styling here.
+                                labelStyle: new charts.TextStyleSpec(
+                                    fontSize: 18, // size in Pts.
+                                    color: charts.MaterialPalette.white),
+
+                                // Change the line colors to match text color.
+                                /*  lineStyle: new charts.LineStyleSpec(
+                                        color: charts.MaterialPalette.white) */
+                              )),
                               behaviors: [
-                                charts.ChartTitle('Meses',
-                                    behaviorPosition:
-                                        charts.BehaviorPosition.bottom,
-                                    titleOutsideJustification: charts
-                                        .OutsideJustification.middleDrawArea),
+                                charts.ChartTitle(
+                                  'Meses',
+                                  titleStyleSpec: charts.TextStyleSpec(
+                                      color: charts.ColorUtil.fromDartColor(
+                                          Colors.white)),
+                                  behaviorPosition:
+                                      charts.BehaviorPosition.bottom,
+                                  titleOutsideJustification: charts
+                                      .OutsideJustification.middleDrawArea,
+                                ),
                                 charts.ChartTitle('%',
+                                    titleStyleSpec: charts.TextStyleSpec(
+                                        color: charts.ColorUtil.fromDartColor(
+                                            Colors.white)),
                                     behaviorPosition:
                                         charts.BehaviorPosition.start,
                                     titleOutsideJustification: charts
