@@ -16,9 +16,9 @@ class _GraficosState extends State<GraficosPage> {
 
   _generateData() {
     var data1 = [
-      Data('Casos', 40),
-      Data('Recuperados', 30),
-      Data('Mortes', 10),
+      Data('Casos', 40, Colors.lightBlue[200]),
+      Data('Recuperados', 30, Color(0xFF03A688)),
+      Data('Mortes', 10, Colors.red[200]),
     ];
 
     var linedata = [
@@ -34,11 +34,13 @@ class _GraficosState extends State<GraficosPage> {
       charts.Series(
         domainFn: (Data data, _) => data.variavel,
         measureFn: (Data data, _) => data.quantidade,
+        colorFn: (Data data, _) => data.color,
         id: 'Comparacao',
         data: data1,
         fillPatternFn: (_, __) => charts.FillPatternType.solid,
-        fillColorFn: (Data data, _) =>
-            charts.ColorUtil.fromDartColor(Colors.blue[700]),
+
+        /*fillColorFn: (Data data, _) =>
+            charts.ColorUtil.fromDartColor(Colors.blue[700]), */
       ),
     );
 
@@ -47,8 +49,8 @@ class _GraficosState extends State<GraficosPage> {
         colorFn: (__, _) => charts.ColorUtil.fromDartColor(Colors.blue[700]),
         id: 'Taxa',
         data: linedata,
-        domainFn: (Line line, _) => line.monthval,
-        measureFn: (Line line, _) => line.lineval,
+        domainFn: (Line line, _) => line.mes,
+        measureFn: (Line line, _) => line.taxamort,
       ),
     );
   }
@@ -69,42 +71,80 @@ class _GraficosState extends State<GraficosPage> {
       home: DefaultTabController(
         length: 2,
         child: Scaffold(
+          backgroundColor: Color(0xFF121212),
           appBar: AppBar(
-            backgroundColor: Colors.white,
+            backgroundColor: Color(0xFF121212),
             title: TabBar(
-              indicatorColor: Color(0xff1976d2),
+              indicatorColor: Color(0xFF03A688),
               tabs: [
                 Tab(
                   icon: Icon(
                     FontAwesomeIcons.solidChartBar,
-                    color: Colors.green,
+                    color: Colors.white,
                   ),
                 ),
                 Tab(
-                    icon: Icon(
-                  FontAwesomeIcons.chartLine,
-                  color: Colors.green,
-                )),
+                    icon:
+                        Icon(FontAwesomeIcons.chartLine, color: Colors.white)),
               ],
             ),
           ),
           body: TabBarView(
             children: [
               Padding(
-                padding: EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(20),
                 child: Container(
+                  padding: EdgeInsets.all(15),
+                  decoration: BoxDecoration(
+                    color: Color(
+                      0xFF252525,
+                    ),
+                    border: Border.all(
+                        width: 1.0,
+                        color: Color(
+                          0xFF252525,
+                        )),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
                   child: Center(
                     child: Column(
                       children: <Widget>[
                         Text(
-                          'Comparação \n\n',
+                          'COMPARAÇÃO \n\n',
                           style: TextStyle(
-                              fontSize: 24.0, fontWeight: FontWeight.bold),
+                            fontSize: 20.0,
+                            color: Color(0xFF03A688),
+                          ),
                         ),
                         Expanded(
                           child: charts.BarChart(
                             _seriesData,
                             animate: true,
+
+                            domainAxis: new charts.OrdinalAxisSpec(
+                                renderSpec: new charts.SmallTickRendererSpec(
+
+                                    // Tick and Label styling here.
+                                    labelStyle: new charts.TextStyleSpec(
+                                        fontSize: 18, // size in Pts.
+                                        color: charts.MaterialPalette.white),
+
+                                    // Change the line colors to match text color.
+                                    lineStyle: new charts.LineStyleSpec(
+                                        color: charts.MaterialPalette.white))),
+
+                            primaryMeasureAxis: new charts.NumericAxisSpec(
+                                renderSpec: new charts.GridlineRendererSpec(
+
+                                    // Tick and Label styling here.
+                                    labelStyle: new charts.TextStyleSpec(
+                                        fontSize: 18, // size in Pts.
+                                        color: charts.MaterialPalette.white),
+
+                                    // Change the line colors to match text color.
+                                    lineStyle: new charts.LineStyleSpec(
+                                        color: charts.MaterialPalette.white))),
+
                             barGroupingType: charts.BarGroupingType.grouped,
                             //behaviors: [new charts.SeriesLegend()],
                             animationDuration: Duration(seconds: 3),
@@ -161,13 +201,16 @@ class _GraficosState extends State<GraficosPage> {
 class Data {
   String variavel;
   int quantidade;
+  final charts.Color color;
 
-  Data(this.variavel, this.quantidade);
+  Data(this.variavel, this.quantidade, Color color)
+      : this.color = new charts.Color(
+            r: color.red, g: color.green, b: color.blue, a: color.alpha);
 }
 
 class Line {
-  int monthval;
-  int lineval;
+  int mes;
+  int taxamort;
 
-  Line(this.monthval, this.lineval);
+  Line(this.mes, this.taxamort);
 }

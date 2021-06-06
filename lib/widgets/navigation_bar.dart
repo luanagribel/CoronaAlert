@@ -37,7 +37,9 @@ class _NavigationBarState extends State<NavigationBar> {
         Container(
           width: MediaQuery.of(context).size.width,
           height: 50,
-          color: Color(0x116B5B).withOpacity(0.3),
+          color: Color(
+            0xFF252525,
+          ),
           child: Wrap(
             alignment: WrapAlignment.center,
             spacing: 65,
