@@ -49,7 +49,7 @@ class _NavigationBarState extends State<NavigationBar> {
                   icon: new FaIcon(
                     FontAwesomeIcons.home,
                     size: 25,
-                    color: Colors.grey[100],
+                    color: Color(0xFF03A688).withOpacity(0.7),
                   ),
                   onPressed: () => navKey.currentState.pushNamed('/inicio'),
                 ),
@@ -59,7 +59,7 @@ class _NavigationBarState extends State<NavigationBar> {
                   icon: new FaIcon(
                     FontAwesomeIcons.virus,
                     size: 25,
-                    color: Colors.grey[100],
+                    color: Color(0xFF03A688).withOpacity(0.7),
                   ),
                   onPressed: () => navKey.currentState.pushNamed('/boletim'),
                 ),
@@ -69,7 +69,7 @@ class _NavigationBarState extends State<NavigationBar> {
                   icon: new FaIcon(
                     FontAwesomeIcons.calendar,
                     size: 25,
-                    color: Colors.grey[100],
+                    color: Color(0xFF03A688).withOpacity(0.7),
                   ),
                   onPressed: () => navKey.currentState.pushNamed('/calendario'),
                 ),

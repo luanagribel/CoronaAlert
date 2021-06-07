@@ -90,8 +90,10 @@ class InicioPage extends StatelessWidget {
                   ),
                   ClipRRect(
                     borderRadius: BorderRadius.circular(20.0),
-                    child: (Image(
-                      image: AssetImage("./assets/img2.jpg"),
+                    child: (Image.asset(
+                      "./assets/img2.jpg",
+                      color: Colors.black.withOpacity(0.3),
+                      colorBlendMode: BlendMode.softLight,
                     )),
                   ),
                   SizedBox(
@@ -154,11 +156,12 @@ class InicioPage extends StatelessWidget {
                     height: 10,
                   ),
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(20.0),
-                    child: (Image(
-                      image: AssetImage("./assets/img3.jpg"),
-                    )),
-                  ),
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: Image.asset(
+                        "./assets/img3.jpg",
+                        color: Colors.black.withOpacity(0.3),
+                        colorBlendMode: BlendMode.softLight,
+                      )),
                   SizedBox(
                     height: 10,
                   ),
@@ -220,11 +223,12 @@ class InicioPage extends StatelessWidget {
                     height: 10,
                   ),
                   ClipRRect(
-                    borderRadius: BorderRadius.circular(20.0),
-                    child: (Image(
-                      image: AssetImage("./assets/img4.jpg"),
-                    )),
-                  ),
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: Image.asset(
+                        "./assets/img4.jpg",
+                        color: Colors.black.withOpacity(0.3),
+                        colorBlendMode: BlendMode.softLight,
+                      )),
                   SizedBox(
                     height: 10,
                   ),
