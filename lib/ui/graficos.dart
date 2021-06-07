@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:intl/intl.dart';
 
 class GraficosPage extends StatefulWidget {
   final Widget child;
@@ -12,22 +13,22 @@ class GraficosPage extends StatefulWidget {
 
 class _GraficosState extends State<GraficosPage> {
   List<charts.Series<Data, String>> _seriesData;
-  List<charts.Series<Line, int>> _seriesLineData;
+  List<charts.Series<Line, num>> _seriesLineData;
 
   _generateData() {
     var data1 = [
-      Data('Casos', 40, Colors.lightBlue[200]),
-      Data('Recuperados', 30, Color(0xFF03A688)),
-      Data('Mortes', 10, Colors.red[200]),
+      Data('Casos', 2555, Colors.lightBlue[200]),
+      Data('Recuperados', 2243, Color(0xFF03A688)),
+      Data('Mortes', 50, Colors.red[200]),
     ];
 
     var linedata = [
-      Line(0, 45),
-      Line(1, 56),
-      Line(2, 55),
-      Line(3, 60),
-      Line(4, 61),
-      Line(5, 70),
+      Line(0, 2.34),
+      Line(1, 2.24),
+      Line(2, 2), //alterar
+      Line(3, 2.04),
+      Line(4, 1.96),
+      Line(5, 1.95), //alterar
     ];
 
     _seriesData.add(
@@ -60,9 +61,25 @@ class _GraficosState extends State<GraficosPage> {
     // TODO: implement initState
     super.initState();
     _seriesData = List<charts.Series<Data, String>>();
-    _seriesLineData = List<charts.Series<Line, int>>();
+    _seriesLineData = List<charts.Series<Line, num>>();
     _generateData();
   }
+
+  final customTickFormatter = charts.BasicNumericTickFormatterSpec((num value) {
+    if (value == 0) {
+      return "Jan";
+    } else if (value == 1) {
+      return "Fev";
+    } else if (value == 2) {
+      return "Mar";
+    } else if (value == 3) {
+      return "Abr";
+    } else if (value == 4) {
+      return "Maio";
+    } else if (value == 5) {
+      return "Jun";
+    }
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -110,11 +127,21 @@ class _GraficosState extends State<GraficosPage> {
                     child: Column(
                       children: <Widget>[
                         Text(
-                          'COMPARAÇÃO \n\n',
+                          'COMPARAÇÃO',
                           style: TextStyle(
                             fontSize: 20.0,
                             color: Colors.white,
                           ),
+                        ),
+                        Text(
+                          '(Dados referentes ao último mês)',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Color(0xFF03A688),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 40,
                         ),
                         Expanded(
                           child: charts.BarChart(
@@ -174,8 +201,11 @@ class _GraficosState extends State<GraficosPage> {
                     child: Column(
                       children: <Widget>[
                         Text(
-                          'MORTALIDADE \n\n',
+                          'TAXA DE MORTALIDADE',
                           style: TextStyle(fontSize: 20.0, color: Colors.white),
+                        ),
+                        SizedBox(
+                          height: 40,
                         ),
                         Expanded(
                           child: charts.LineChart(_seriesLineData,
@@ -184,15 +214,17 @@ class _GraficosState extends State<GraficosPage> {
                               animate: true,
                               animationDuration: Duration(seconds: 3),
                               domainAxis: new charts.NumericAxisSpec(
-                                renderSpec: charts.GridlineRendererSpec(
+                                renderSpec: new charts.GridlineRendererSpec(
+                                  // Tick and Label styling here.
                                   labelStyle: new charts.TextStyleSpec(
                                       fontSize: 18, // size in Pts.
                                       color: charts.MaterialPalette.white),
-                                  /* lineStyle: charts.LineStyleSpec(
-                                      color: charts.MaterialPalette.white,
-                                      thickness: 1,
-                                    )*/
                                 ),
+                                tickProviderSpec:
+                                    charts.BasicNumericTickProviderSpec(
+                                  desiredTickCount: 6,
+                                ),
+                                tickFormatterSpec: customTickFormatter,
                               ),
                               primaryMeasureAxis: new charts.NumericAxisSpec(
                                   renderSpec: new charts.GridlineRendererSpec(
@@ -207,7 +239,7 @@ class _GraficosState extends State<GraficosPage> {
                               )),
                               behaviors: [
                                 charts.ChartTitle(
-                                  'Meses',
+                                  '',
                                   titleStyleSpec: charts.TextStyleSpec(
                                       color: charts.ColorUtil.fromDartColor(
                                           Colors.white)),
@@ -251,7 +283,7 @@ class Data {
 
 class Line {
   int mes;
-  int taxamort;
+  double taxamort;
 
   Line(this.mes, this.taxamort);
 }

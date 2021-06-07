@@ -82,8 +82,6 @@ class _AppViewState extends State<AppView> {
           preferredSize: Size.fromHeight(60.0),
           child: AppBar(
             title: Container(
-              alignment: Alignment.center,
-              margin: EdgeInsets.fromLTRB(0, 0.0, 10.0, 0.0),
               child: Image(
                 image: AssetImage("./assets/coronaalert.png"),
                 // fit: BoxFit.fitHeight

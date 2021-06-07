@@ -77,7 +77,7 @@ class BoletimPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      '193',
+                      '2555',
                       style: TextStyle(fontSize: 20, color: Colors.grey[100]),
                     ),
                   ],
@@ -119,7 +119,7 @@ class BoletimPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      '34',
+                      '50',
                       style: TextStyle(fontSize: 20, color: Colors.grey[100]),
                     ),
                   ],
@@ -161,7 +161,7 @@ class BoletimPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      '2%',
+                      '1.96%',
                       style: TextStyle(
                         fontSize: 20,
                         color: Colors.grey[100],
@@ -233,7 +233,7 @@ class BoletimPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              '193',
+                              '2555',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 fontSize: 20,
@@ -281,7 +281,7 @@ class BoletimPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              '34',
+                              '50',
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
@@ -328,7 +328,7 @@ class BoletimPage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              '2%',
+                              '1.96%',
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold,
