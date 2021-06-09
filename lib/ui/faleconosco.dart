@@ -51,7 +51,7 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
         ),
         Container(
           width: MediaQuery.of(context).size.width,
-          margin: EdgeInsets.fromLTRB(40.0, 0.0, 20.0, 40.0),
+          margin: EdgeInsets.fromLTRB(20.0, 0.0, 20.0, 20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -71,7 +71,7 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
                 ),
               ),
               SizedBox(
-                height: 15,
+                height: 30,
               ),
               Text(
                 'PREENCHA OS CAMPOS ABAIXO EM CASO DE DÚVIDAS OU SUGESTÕES:',
@@ -86,7 +86,16 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
         ),
         FractionallySizedBox(
           widthFactor: 0.8,
-          child: TextField(
+          child: TextFormField(
+            validator: (value) {
+              if (value.isEmpty) {
+                return 'Campo obrigatorio';
+              }
+              if (value.length < 3) {
+                return 'Nome deve conter mais de 3 caracteres';
+              }
+              return null;
+            },
             key: Key('nameTextField'),
             controller: nameController,
             obscureText: false,
@@ -178,7 +187,7 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
-              Icons.mail_outline,
+              Icons.chat_outlined,
               color: Color(0xFF03A688),
             ),
             SizedBox(

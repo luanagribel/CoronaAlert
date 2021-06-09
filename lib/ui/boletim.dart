@@ -372,257 +372,279 @@ class BoletimPage extends StatelessWidget {
                     color: Colors.white),
               ),
             ),
-            SizedBox(
-              height: 100,
-            ),
             Wrap(
-              spacing: 160,
               alignment: WrapAlignment.center,
               children: [
                 Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'NÚMERO DE INFECTADOS',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF03A688),
-                        ),
+                  padding: EdgeInsets.fromLTRB(50, 50, 50, 50),
+                  margin: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: Color(
+                      0xFF252525,
+                    ),
+                    border: Border.all(
+                      width: 1.0,
+                      color: Color(
+                        0xFF252525,
                       ),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
-                        // padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
-                        height: (MediaQuery.of(context).size.height -
-                                appBar.preferredSize.height) /
-                            12,
-                        width: MediaQuery.of(context).size.width / 6,
-                        decoration: BoxDecoration(
-                          color: Color(
-                            0xFF252525,
-                          ),
-                          border: Border.all(
-                            width: 1.0,
-                            color: Color(
-                              0xFF252525,
-                            ),
-                          ),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              '2555',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey[100],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                    ),
+                    borderRadius: BorderRadius.circular(10),
                   ),
-                ),
-                Container(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        'NÚMERO DE ÓBITOS',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF03A688),
-                        ),
+                      Wrap(
+                        spacing: 160,
+                        alignment: WrapAlignment.center,
+                        children: [
+                          Container(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.signal_cellular_alt_outlined,
+                                  color: Color(0xFF03A688),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'NÚMERO DE INFECTADOS',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Container(
+                                  margin:
+                                      EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                                  // padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
+                                  height: (MediaQuery.of(context).size.height -
+                                          appBar.preferredSize.height) /
+                                      12,
+                                  width: MediaQuery.of(context).size.width / 6,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF03A688).withOpacity(0.3),
+                                    border: Border.all(
+                                        width: 1.0, color: Colors.black),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        '2555',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.grey[100],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.signal_cellular_alt_outlined,
+                                  color: Color(0xFF03A688),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'NÚMERO DE ÓBITOS',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Container(
+                                  margin:
+                                      EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                                  height: (MediaQuery.of(context).size.height -
+                                          appBar.preferredSize.height) /
+                                      12,
+                                  width: MediaQuery.of(context).size.width / 6,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF03A688).withOpacity(0.3),
+                                    border: Border.all(
+                                        width: 1.0, color: Colors.black),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        '50',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.grey[100],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Container(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.signal_cellular_alt_outlined,
+                                  color: Color(0xFF03A688),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'TAXA DE MORTALIDADE',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Container(
+                                  margin:
+                                      EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                                  height: (MediaQuery.of(context).size.height -
+                                          appBar.preferredSize.height) /
+                                      12,
+                                  width: MediaQuery.of(context).size.width / 6,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF03A688).withOpacity(0.3),
+                                    border: Border.all(
+                                        width: 1.0, color: Colors.black),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        '1.96%',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.grey[100],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
-                        height: (MediaQuery.of(context).size.height -
-                                appBar.preferredSize.height) /
-                            12,
-                        width: MediaQuery.of(context).size.width / 6,
-                        decoration: BoxDecoration(
-                          color: Color(
-                            0xFF252525,
-                          ),
-                          border: Border.all(
-                            width: 1.0,
-                            color: Color(
-                              0xFF252525,
-                            ),
-                          ),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              '50',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey[100],
-                              ),
-                            ),
-                          ],
-                        ),
+                      SizedBox(
+                        height: 100,
                       ),
-                    ],
-                  ),
-                ),
-                Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'TAXA DE MORTALIDADE',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF03A688),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
-                        height: (MediaQuery.of(context).size.height -
-                                appBar.preferredSize.height) /
-                            12,
-                        width: MediaQuery.of(context).size.width / 6,
-                        decoration: BoxDecoration(
-                          color: Color(
-                            0xFF252525,
-                          ),
-                          border: Border.all(
-                            width: 1.0,
-                            color: Color(
-                              0xFF252525,
+                      Wrap(
+                        spacing: 160,
+                        alignment: WrapAlignment.center,
+                        children: [
+                          Container(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.signal_cellular_alt_outlined,
+                                  color: Color(0xFF03A688),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'NÚMERO DE RECUPERADOS',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Container(
+                                  margin:
+                                      EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                                  // padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
+                                  height: (MediaQuery.of(context).size.height -
+                                          appBar.preferredSize.height) /
+                                      12,
+                                  width: MediaQuery.of(context).size.width / 6,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF03A688).withOpacity(0.3),
+                                    border: Border.all(
+                                        width: 1.0, color: Colors.black),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        '2243',
+                                        textAlign: TextAlign.center,
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.grey[100],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              '1.96%',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey[100],
-                              ),
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 100,
-            ),
-            Wrap(
-              spacing: 160,
-              alignment: WrapAlignment.center,
-              children: [
-                Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'NÚMERO DE RECUPERADOS',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF03A688),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
-                        // padding: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
-                        height: (MediaQuery.of(context).size.height -
-                                appBar.preferredSize.height) /
-                            12,
-                        width: MediaQuery.of(context).size.width / 6,
-                        decoration: BoxDecoration(
-                          color: Color(
-                            0xFF252525,
-                          ),
-                          border: Border.all(
-                            width: 1.0,
-                            color: Color(
-                              0xFF252525,
+                          Container(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.signal_cellular_alt_outlined,
+                                  color: Color(0xFF03A688),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'TAXA DE RECUPERAÇÃO',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Container(
+                                  margin:
+                                      EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                                  height: (MediaQuery.of(context).size.height -
+                                          appBar.preferredSize.height) /
+                                      12,
+                                  width: MediaQuery.of(context).size.width / 6,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF03A688).withOpacity(0.3),
+                                    border: Border.all(
+                                        width: 1.0, color: Colors.black),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        '87.79%',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.grey[100],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              '2243',
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey[100],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                Container(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'TAXA DE RECUPERAÇÃO',
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF03A688),
-                        ),
-                      ),
-                      Container(
-                        margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
-                        height: (MediaQuery.of(context).size.height -
-                                appBar.preferredSize.height) /
-                            12,
-                        width: MediaQuery.of(context).size.width / 6,
-                        decoration: BoxDecoration(
-                          color: Color(
-                            0xFF252525,
-                          ),
-                          border: Border.all(
-                            width: 1.0,
-                            color: Color(
-                              0xFF252525,
-                            ),
-                          ),
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text(
-                              '87.79%',
-                              style: TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.grey[100],
-                              ),
-                            ),
-                          ],
-                        ),
+                        ],
                       ),
                     ],
                   ),
