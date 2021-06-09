@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:intl/intl.dart';
 
 class GraficosPage extends StatefulWidget {
   final Widget child;
@@ -17,18 +16,17 @@ class _GraficosState extends State<GraficosPage> {
 
   _generateData() {
     var data1 = [
-      Data('Casos', 2555, Colors.lightBlue[200]),
-      Data('Recuperados', 2243, Color(0xFF03A688)),
-      Data('Mortes', 50, Colors.red[200]),
+      Data('Casos', 547, Colors.lightBlue[200]),
+      Data('Recuperados', 412, Color(0xFF03A688)),
+      Data('Mortes', 9, Colors.red[200]),
     ];
 
     var linedata = [
-      Line(0, 2.34),
-      Line(1, 2.24),
-      Line(2, 2), //alterar
-      Line(3, 2.04),
-      Line(4, 1.96),
-      Line(5, 1.95), //alterar
+      Line(0, 1.44),
+      Line(1, 1.45),
+      Line(2, 1.43), //alterar
+      Line(3, 2.35),
+      Line(4, 1.64)
     ];
 
     _seriesData.add(
@@ -76,8 +74,6 @@ class _GraficosState extends State<GraficosPage> {
       return "Abr";
     } else if (value == 4) {
       return "Maio";
-    } else if (value == 5) {
-      return "Jun";
     }
   });
 
@@ -132,6 +128,9 @@ class _GraficosState extends State<GraficosPage> {
                             fontSize: 20.0,
                             color: Colors.white,
                           ),
+                        ),
+                        SizedBox(
+                          height: 10,
                         ),
                         Text(
                           '(Dados referentes ao último mês)',
@@ -205,6 +204,16 @@ class _GraficosState extends State<GraficosPage> {
                           style: TextStyle(fontSize: 20.0, color: Colors.white),
                         ),
                         SizedBox(
+                          height: 10,
+                        ),
+                        Text(
+                          '2021',
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Color(0xFF03A688),
+                          ),
+                        ),
+                        SizedBox(
                           height: 40,
                         ),
                         Expanded(
@@ -222,7 +231,7 @@ class _GraficosState extends State<GraficosPage> {
                                 ),
                                 tickProviderSpec:
                                     charts.BasicNumericTickProviderSpec(
-                                  desiredTickCount: 6,
+                                  desiredTickCount: 5,
                                 ),
                                 tickFormatterSpec: customTickFormatter,
                               ),

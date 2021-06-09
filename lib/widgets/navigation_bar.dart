@@ -35,11 +35,16 @@ class _NavigationBarState extends State<NavigationBar> {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Container(
+          decoration: BoxDecoration(
+              color: Color(
+                0xFF252525,
+              ),
+              border: Border(
+                top: BorderSide(
+                    width: 1.0, color: Color(0xFF03A688).withOpacity(0.7)),
+              )),
           width: MediaQuery.of(context).size.width,
           height: 50,
-          color: Color(
-            0xFF252525,
-          ),
           child: Wrap(
             alignment: WrapAlignment.center,
             spacing: 65,

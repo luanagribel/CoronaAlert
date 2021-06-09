@@ -47,22 +47,7 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
         body: ListView(
       children: [
         SizedBox(
-          height: 70,
-        ),
-        Container(
-          margin: EdgeInsets.only(left: 10),
-          child: Text(
-            "FALE CONOSCO",
-            textAlign: TextAlign.left,
-            style: TextStyle(
-              fontSize: 16,
-              //fontWeight: FontWeight.bold,
-              color: Color(0xFF03A688),
-            ),
-          ),
-        ),
-        SizedBox(
-          height: 50,
+          height: 100,
         ),
         Container(
           width: MediaQuery.of(context).size.width,
@@ -70,12 +55,30 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Icon(
+                Icons.chat_outlined,
+                color: Color(0xFF03A688),
+              ),
+              SizedBox(
+                height: 10,
+              ),
               Text(
-                'PREENCHA OS CAMPOS ABAIXO EM CASO DE DÚVIDAS OU SUGESTÕES:',
+                'FALE CONOSCO',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 18,
                   color: Color(0xFF03A688),
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              Text(
+                'PREENCHA OS CAMPOS ABAIXO EM CASO DE DÚVIDAS OU SUGESTÕES:',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 14,
+                  color: Colors.white,
                 ),
               ),
             ],
@@ -174,13 +177,30 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Icon(
+              Icons.mail_outline,
+              color: Color(0xFF03A688),
+            ),
+            SizedBox(
+              height: 12,
+            ),
             Text(
-              'PREENCHA OS CAMPOS ABAIXO EM CASO DE DÚVIDAS OU SUGESTÕES:',
+              'FALE CONOSCO',
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
                 color: Color(0xFF03A688),
               ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              'PREENCHA OS CAMPOS ABAIXO EM CASO DE DÚVIDAS OU SUGESTÕES:',
+              style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             ),
           ],
         ),

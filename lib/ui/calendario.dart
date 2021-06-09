@@ -34,7 +34,7 @@ class CalendarioPage extends StatelessWidget {
               "VACINÔMETRO",
               textAlign: TextAlign.left,
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 18,
                 //fontWeight: FontWeight.bold,
                 color: Color(0xFF03A688),
               ),
@@ -71,7 +71,7 @@ class CalendarioPage extends StatelessWidget {
               "DÚVIDAS FREQUENTES",
               textAlign: TextAlign.left,
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 18,
                 //fontWeight: FontWeight.bold,
                 color: Color(0xFF03A688),
               ),
@@ -106,20 +106,30 @@ class CalendarioPage extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16,
-                  color: Color(0xFF03A688),
+                  color: Colors.white,
                 ),
               ),
               SizedBox(
                 height: 20,
               ),
-              Align(
-                alignment: Alignment.center,
-                child: Text(
-                  "Não, os grupos prioritários e a ordem em que eles serão vacinados foram definidos pelo Ministério da Saúde, e pela Secretaria do Estado de Saúde de Minas Gerais, por meio da Deliberação CIB-SUS/MG 3314, de 29 de janeiro de 2021.",
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey[100],
+              Container(
+                // margin: EdgeInsets.all(5),
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Color(0xFF03A688).withOpacity(0.3),
+                  border: Border.all(
+                      width: 1.0, color: Color(0xFF03A688).withOpacity(0.3)),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "Não, os grupos prioritários e a ordem em que eles serão vacinados foram definidos pelo Ministério da Saúde, e pela Secretaria do Estado de Saúde de Minas Gerais, por meio da Deliberação CIB-SUS/MG 3314, de 29 de janeiro de 2021.",
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                      fontSize: 15,
+                      color: Colors.grey[100],
+                    ),
                   ),
                 ),
               ),
@@ -154,35 +164,48 @@ class CalendarioPage extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16,
-                  color: Color(0xFF03A688),
+                  color: Colors.white,
                 ),
               ),
               SizedBox(
                 height: 20,
               ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "Grupo de comorbidades: Pessoas com Síndrome de Down (todos acima de 18 anos)\nRenal crônico: Que faz hemodiálise e diálise (todos acima de 18 anos)\nDemais Comorbidades: de 59 a 55 anos.\n(Grupo em anexo. Pessoas com deficiência cadastradas no BPC: de 59 a 55 anos.)",
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey[100],
-                  ),
+              Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Color(0xFF03A688).withOpacity(0.3),
+                  border: Border.all(
+                      width: 1.0, color: Color(0xFF03A688).withOpacity(0.3)),
+                  borderRadius: BorderRadius.circular(20),
                 ),
-              ),
-              SizedBox(
-                height: 10,
-              ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "Nota: Gestantes e Puérperas suspensão a vacinação com a vacina do Laboratório Fio Cruz/ Astrazenica, de acordo com o ofício em anexo.O Município recebeu apenas o laboratório Fiocruz/Astrazenica, por esse motivo a suspensão da vacina para Gestantes e Puérperas.",
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.grey[100],
-                  ),
+                child: Column(
+                  children: [
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Grupo de comorbidades: Pessoas com Síndrome de Down (todos acima de 18 anos)\nRenal crônico: Que faz hemodiálise e diálise (todos acima de 18 anos)\nDemais Comorbidades: de 59 a 55 anos.\n(Grupo em anexo. Pessoas com deficiência cadastradas no BPC: de 59 a 55 anos.)",
+                        textAlign: TextAlign.justify,
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.grey[100],
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Nota: Gestantes e Puérperas suspensão a vacinação com a vacina do Laboratório Fio Cruz/ Astrazenica, de acordo com o ofício em anexo.O Município recebeu apenas o laboratório Fiocruz/Astrazenica, por esse motivo a suspensão da vacina para Gestantes e Puérperas.",
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.grey[100],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               SizedBox(
@@ -216,20 +239,29 @@ class CalendarioPage extends StatelessWidget {
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 16,
-                  color: Color(0xFF03A688),
+                  color: Colors.white,
                 ),
               ),
               SizedBox(
                 height: 20,
               ),
-              Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "Caso algum idoso nesta faixa de idade ainda não tenha recebido a vacina, solicitamos que a família, ou amigos procurem o Posto de Saúde em que o idoso for registrado, ou o posto mais próximo, de acordo com seu bairro para saber quais os horários disponíveis e se a vacina será feita em domicílio, ou não.",
-                  textAlign: TextAlign.justify,
-                  style: TextStyle(
-                    fontSize: 14,
-                    color: Colors.grey[100],
+              Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: Color(0xFF03A688).withOpacity(0.3),
+                  border: Border.all(
+                      width: 1.0, color: Color(0xFF03A688).withOpacity(0.3)),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    "Caso algum idoso nesta faixa de idade ainda não tenha recebido a vacina, solicitamos que a família, ou amigos procurem o Posto de Saúde em que o idoso for registrado, ou o posto mais próximo, de acordo com seu bairro para saber quais os horários disponíveis e se a vacina será feita em domicílio, ou não.",
+                    textAlign: TextAlign.justify,
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.grey[100],
+                    ),
                   ),
                 ),
               ),

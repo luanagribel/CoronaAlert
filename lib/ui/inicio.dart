@@ -40,7 +40,7 @@ class InicioPage extends StatelessWidget {
               "ÚLTIMAS NOTÍCIAS",
               textAlign: TextAlign.left,
               style: TextStyle(
-                fontSize: 16,
+                fontSize: 18,
                 //fontWeight: FontWeight.bold,
                 color: Color(0xFF03A688),
               ),
@@ -51,9 +51,9 @@ class InicioPage extends StatelessWidget {
           ),
           Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
+              margin: EdgeInsets.only(bottom: 5.0),
               alignment: Alignment(0.0, 0.0),
-              padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+              padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Color(
                   0xFF252525,
@@ -81,8 +81,8 @@ class InicioPage extends StatelessWidget {
                     "ALUNOS SE ADAPTAM A AULAS REMOTAS DURANTE A PANDEMIA",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 18,
-                      color: Color(0xFF03A688),
+                      fontSize: 16,
+                      color: Colors.white,
                     ),
                   ),
                   SizedBox(
@@ -118,8 +118,8 @@ class InicioPage extends StatelessWidget {
               )),
           Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
-              padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+              margin: EdgeInsets.only(bottom: 5.0),
+              padding: EdgeInsets.all(10),
               alignment: Alignment(0.0, 0.0),
               decoration: BoxDecoration(
                 color: Color(
@@ -148,8 +148,8 @@ class InicioPage extends StatelessWidget {
                     "SANTA RITA ATINGE 99,1% DE EFICÁCIA NA APLICAÇÃO DA 1ª DOSE DA VACINA CONTRA COVID-19",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 18,
-                      color: Color(0xFF03A688),
+                      fontSize: 16,
+                      color: Colors.white,
                     ),
                   ),
                   SizedBox(
@@ -185,8 +185,8 @@ class InicioPage extends StatelessWidget {
               )),
           Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
-              padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+              margin: EdgeInsets.only(bottom: 5.0),
+              padding: EdgeInsets.all(10),
               alignment: Alignment(0.0, 0.0),
               decoration: BoxDecoration(
                 color: Color(
@@ -214,10 +214,7 @@ class InicioPage extends StatelessWidget {
                   Text(
                     "MAIS DE 16 MIL DOSES DE VACINA FORAM APLICADAS EM SANTA RITA",
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Color(0xFF03A688),
-                    ),
+                    style: TextStyle(fontSize: 16, color: Colors.white),
                   ),
                   SizedBox(
                     height: 10,
