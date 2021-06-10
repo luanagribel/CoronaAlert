@@ -46,8 +46,37 @@ class FaleConoscoPageState extends State<FaleConoscoPage> {
     return Scaffold(
         body: ListView(
       children: [
+        Container(
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Color(
+                0xFF252525,
+              ),
+              border: Border.all(
+                  width: 1.0,
+                  color: Color(
+                    0xFF252525,
+                  )),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            margin: EdgeInsets.only(top: 20, bottom: 15, left: 40, right: 40),
+            child: Wrap(
+              alignment: WrapAlignment.center,
+              children: [
+                Icon(
+                  Icons.pin_drop_outlined,
+                  color: Colors.white,
+                  size: 18,
+                ),
+                SizedBox(
+                  width: 5,
+                ),
+                Text("SANTA RITA DO SAPUCAÍ",
+                    style: TextStyle(fontSize: 14, color: Colors.white)),
+              ],
+            )),
         SizedBox(
-          height: 100,
+          height: 50,
         ),
         Container(
           width: MediaQuery.of(context).size.width,

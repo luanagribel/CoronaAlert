@@ -31,11 +31,40 @@ class InicioPage extends StatelessWidget {
       backgroundColor: Color(0xFF121212),
       body: ListView(
         children: [
+          Container(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: Color(
+                  0xFF252525,
+                ),
+                border: Border.all(
+                    width: 1.0,
+                    color: Color(
+                      0xFF252525,
+                    )),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              margin: EdgeInsets.only(top: 20, bottom: 15, left: 40, right: 40),
+              child: Wrap(
+                alignment: WrapAlignment.center,
+                children: [
+                  Icon(
+                    Icons.pin_drop_outlined,
+                    color: Colors.white,
+                    size: 18,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text("SANTA RITA DO SAPUCAÍ",
+                      style: TextStyle(fontSize: 14, color: Colors.white)),
+                ],
+              )),
           SizedBox(
             height: 50,
           ),
           Container(
-            margin: EdgeInsets.only(left: 10),
+            margin: EdgeInsets.only(left: 20),
             child: Text(
               "ÚLTIMAS NOTÍCIAS",
               textAlign: TextAlign.left,
@@ -46,13 +75,9 @@ class InicioPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: 10,
-          ),
           Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.only(bottom: 5.0),
-              alignment: Alignment(0.0, 0.0),
+              margin: EdgeInsets.all(10.0),
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: Color(
@@ -118,7 +143,7 @@ class InicioPage extends StatelessWidget {
               )),
           Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.only(bottom: 5.0),
+              margin: EdgeInsets.all(10.0),
               padding: EdgeInsets.all(10),
               alignment: Alignment(0.0, 0.0),
               decoration: BoxDecoration(
@@ -185,7 +210,7 @@ class InicioPage extends StatelessWidget {
               )),
           Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.only(bottom: 5.0),
+              margin: EdgeInsets.all(10.0),
               padding: EdgeInsets.all(10),
               alignment: Alignment(0.0, 0.0),
               decoration: BoxDecoration(

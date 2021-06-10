@@ -25,11 +25,40 @@ class CalendarioPage extends StatelessWidget {
       backgroundColor: Color(0xFF121212),
       body: ListView(
         children: [
+          Container(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: Color(
+                  0xFF252525,
+                ),
+                border: Border.all(
+                    width: 1.0,
+                    color: Color(
+                      0xFF252525,
+                    )),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              margin: EdgeInsets.only(top: 20, bottom: 15, left: 40, right: 40),
+              child: Wrap(
+                alignment: WrapAlignment.center,
+                children: [
+                  Icon(
+                    Icons.pin_drop_outlined,
+                    color: Colors.white,
+                    size: 18,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text("SANTA RITA DO SAPUCAÍ",
+                      style: TextStyle(fontSize: 14, color: Colors.white)),
+                ],
+              )),
           SizedBox(
             height: 50,
           ),
           Container(
-            margin: EdgeInsets.only(left: 10),
+            margin: EdgeInsets.only(left: 20),
             child: Text(
               "VACINÔMETRO",
               textAlign: TextAlign.left,
@@ -40,14 +69,10 @@ class CalendarioPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: 10,
-          ),
           Container(
             width: MediaQuery.of(context).size.width,
-            margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 5.0),
+            margin: EdgeInsets.all(10),
             padding: EdgeInsets.all(10),
-            alignment: Alignment(0.0, 0.0),
             decoration: BoxDecoration(
               color: baseColor,
               border: Border.all(width: 1.0, color: baseColor),
@@ -66,7 +91,7 @@ class CalendarioPage extends StatelessWidget {
             height: 30,
           ),
           Container(
-            margin: EdgeInsets.only(left: 10),
+            margin: EdgeInsets.only(left: 20),
             child: Text(
               "DÚVIDAS FREQUENTES",
               textAlign: TextAlign.left,
@@ -77,14 +102,10 @@ class CalendarioPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
-            height: 10,
-          ),
           Container(
             width: MediaQuery.of(context).size.width,
-            margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
-            padding: EdgeInsets.fromLTRB(20, 10, 10, 10),
-            alignment: Alignment(0.0, 0.0),
+            margin: EdgeInsets.all(10.0),
+            padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: baseColor,
               border: Border.all(width: 1.0, color: baseColor),
@@ -140,8 +161,8 @@ class CalendarioPage extends StatelessWidget {
           ),
           Container(
             width: MediaQuery.of(context).size.width,
-            margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
-            padding: EdgeInsets.fromLTRB(20, 10, 10, 10),
+            margin: EdgeInsets.all(10.0),
+            padding: EdgeInsets.all(10),
             alignment: Alignment(0.0, 0.0),
             decoration: BoxDecoration(
               color: baseColor,
@@ -215,9 +236,8 @@ class CalendarioPage extends StatelessWidget {
           ),
           Container(
             width: MediaQuery.of(context).size.width,
-            margin: EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 5.0),
-            padding: EdgeInsets.fromLTRB(20, 10, 10, 10),
-            alignment: Alignment(0.0, 0.0),
+            margin: EdgeInsets.all(10.0),
+            padding: EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: baseColor,
               border: Border.all(width: 1.0, color: baseColor),

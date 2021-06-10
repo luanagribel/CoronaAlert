@@ -38,11 +38,40 @@ class BoletimPage extends StatelessWidget {
           }),
       body: ListView(
         children: [
+          Container(
+              padding: EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: Color(
+                  0xFF252525,
+                ),
+                border: Border.all(
+                    width: 1.0,
+                    color: Color(
+                      0xFF252525,
+                    )),
+                borderRadius: BorderRadius.circular(20),
+              ),
+              margin: EdgeInsets.only(top: 20, bottom: 15, left: 40, right: 40),
+              child: Wrap(
+                alignment: WrapAlignment.center,
+                children: [
+                  Icon(
+                    Icons.pin_drop_outlined,
+                    color: Colors.white,
+                    size: 18,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text("SANTA RITA DO SAPUCAÍ",
+                      style: TextStyle(fontSize: 14, color: Colors.white)),
+                ],
+              )),
           SizedBox(
-            height: 70,
+            height: 50,
           ),
           Container(
-            margin: EdgeInsets.only(left: 10),
+            margin: EdgeInsets.only(left: 20),
             child: Text(
               "BOLETIM EPIDEMIOLÓGICO",
               textAlign: TextAlign.left,
@@ -54,10 +83,10 @@ class BoletimPage extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 5,
+            height: 2,
           ),
           Container(
-            margin: EdgeInsets.only(left: 10),
+            margin: EdgeInsets.only(left: 20),
             child: Text(
               "(NÚMEROS TOTAIS ATÉ O ÚLTIMO MÊS)",
               textAlign: TextAlign.left,
@@ -67,9 +96,6 @@ class BoletimPage extends StatelessWidget {
                 color: Colors.white,
               ),
             ),
-          ),
-          SizedBox(
-            height: 10,
           ),
           Container(
             margin: EdgeInsets.all(10),
