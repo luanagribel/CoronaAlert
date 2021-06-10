@@ -304,8 +304,43 @@ class CalendarioPage extends StatelessWidget {
       backgroundColor: Color(0xFF121212),
       body: ListView(
         children: [
+          Wrap(
+            alignment: WrapAlignment.center,
+            children: [
+              Container(
+                  padding: EdgeInsets.fromLTRB(50, 10, 50, 10),
+                  decoration: BoxDecoration(
+                    color: Color(
+                      0xFF252525,
+                    ),
+                    border: Border.all(
+                        width: 1.0,
+                        color: Color(
+                          0xFF252525,
+                        )),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  margin:
+                      EdgeInsets.only(top: 20, bottom: 15, left: 10, right: 10),
+                  child: Wrap(
+                    alignment: WrapAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.pin_drop_outlined,
+                        color: Colors.white,
+                        size: 18,
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text("SANTA RITA DO SAPUCAÍ",
+                          style: TextStyle(fontSize: 14, color: Colors.white)),
+                    ],
+                  )),
+            ],
+          ),
           SizedBox(
-            height: 130,
+            height: 65,
           ),
           Wrap(
             spacing: 100,
