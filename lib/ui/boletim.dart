@@ -219,6 +219,55 @@ class BoletimPage extends StatelessWidget {
                         height: 5,
                       ),
                       Text(
+                        'NÚMERO DE RECUPERADOS',
+                        style: TextStyle(
+                            fontSize: 16,
+                            //fontWeight: FontWeight.bold,
+                            color: Colors.white),
+                      ),
+                    ],
+                  ),
+                ),
+                FractionallySizedBox(
+                  widthFactor: 0.5,
+                  child: Container(
+                    margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 30.0),
+                    height: (MediaQuery.of(context).size.height -
+                            appBar.preferredSize.height) /
+                        12,
+                    decoration: BoxDecoration(
+                      color: Color(0xFF03A688).withOpacity(0.3),
+                      border: Border.all(width: 1.0, color: Colors.black),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '2243',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Colors.grey[100],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.signal_cellular_alt_outlined,
+                        color: Color(0xFF03A688),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
                         'TAXA DE MORTALIDADE',
                         style: TextStyle(
                           fontSize: 16,
@@ -246,55 +295,6 @@ class BoletimPage extends StatelessWidget {
                       children: [
                         Text(
                           '1.96%',
-                          style: TextStyle(
-                            fontSize: 20,
-                            color: Colors.grey[100],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 10.0),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.signal_cellular_alt_outlined,
-                        color: Color(0xFF03A688),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        'NÚMERO DE RECUPERADOS',
-                        style: TextStyle(
-                            fontSize: 16,
-                            //fontWeight: FontWeight.bold,
-                            color: Colors.white),
-                      ),
-                    ],
-                  ),
-                ),
-                FractionallySizedBox(
-                  widthFactor: 0.5,
-                  child: Container(
-                    margin: EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 30.0),
-                    height: (MediaQuery.of(context).size.height -
-                            appBar.preferredSize.height) /
-                        12,
-                    decoration: BoxDecoration(
-                      color: Color(0xFF03A688).withOpacity(0.3),
-                      border: Border.all(width: 1.0, color: Colors.black),
-                      borderRadius: BorderRadius.circular(10),
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '2243',
                           style: TextStyle(
                             fontSize: 20,
                             color: Colors.grey[100],
@@ -566,62 +566,6 @@ class BoletimPage extends StatelessWidget {
                                   height: 10,
                                 ),
                                 Text(
-                                  'TAXA DE MORTALIDADE',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                                Container(
-                                  margin:
-                                      EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
-                                  height: (MediaQuery.of(context).size.height -
-                                          appBar.preferredSize.height) /
-                                      12,
-                                  width: MediaQuery.of(context).size.width / 6,
-                                  decoration: BoxDecoration(
-                                    color: Color(0xFF03A688).withOpacity(0.3),
-                                    border: Border.all(
-                                        width: 1.0, color: Colors.black),
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text(
-                                        '1.96%',
-                                        style: TextStyle(
-                                          fontSize: 20,
-                                          color: Colors.grey[100],
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 100,
-                      ),
-                      Wrap(
-                        spacing: 160,
-                        alignment: WrapAlignment.center,
-                        children: [
-                          Container(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.signal_cellular_alt_outlined,
-                                  color: Color(0xFF03A688),
-                                ),
-                                SizedBox(
-                                  height: 10,
-                                ),
-                                Text(
                                   'NÚMERO DE RECUPERADOS',
                                   style: TextStyle(
                                     fontSize: 14,
@@ -656,6 +600,62 @@ class BoletimPage extends StatelessWidget {
                                     ],
                                   ),
                                 ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 100,
+                      ),
+                      Wrap(
+                        spacing: 160,
+                        alignment: WrapAlignment.center,
+                        children: [
+                          Container(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.signal_cellular_alt_outlined,
+                                  color: Color(0xFF03A688),
+                                ),
+                                SizedBox(
+                                  height: 10,
+                                ),
+                                Text(
+                                  'TAXA DE MORTALIDADE',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Container(
+                                  margin:
+                                      EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 0.0),
+                                  height: (MediaQuery.of(context).size.height -
+                                          appBar.preferredSize.height) /
+                                      12,
+                                  width: MediaQuery.of(context).size.width / 6,
+                                  decoration: BoxDecoration(
+                                    color: Color(0xFF03A688).withOpacity(0.3),
+                                    border: Border.all(
+                                        width: 1.0, color: Colors.black),
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        '1.96%',
+                                        style: TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.grey[100],
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                )
                               ],
                             ),
                           ),

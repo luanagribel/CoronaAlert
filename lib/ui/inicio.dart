@@ -143,9 +143,8 @@ class InicioPage extends StatelessWidget {
               )),
           Container(
               width: MediaQuery.of(context).size.width,
-              margin: EdgeInsets.all(10.0),
+              margin: EdgeInsets.fromLTRB(10.0, 0, 10.0, 0),
               padding: EdgeInsets.all(10),
-              alignment: Alignment(0.0, 0.0),
               decoration: BoxDecoration(
                 color: Color(
                   0xFF252525,
