@@ -125,7 +125,7 @@ class BoletimPage extends StatelessWidget {
                         height: 5,
                       ),
                       Text(
-                        'NÚMERO DE INFECTADOS',
+                        'NÚMERO DE CASOS CONFIRMADOS',
                         style: TextStyle(
                             fontSize: 16,
                             //fontWeight: FontWeight.bold,
@@ -150,7 +150,7 @@ class BoletimPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          '2555',
+                          '2947',
                           style:
                               TextStyle(fontSize: 20, color: Colors.grey[100]),
                         ),
@@ -197,7 +197,7 @@ class BoletimPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          '50',
+                          '53',
                           style:
                               TextStyle(fontSize: 20, color: Colors.grey[100]),
                         ),
@@ -244,7 +244,7 @@ class BoletimPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(
-                          '2243',
+                          '2537',
                           style: TextStyle(
                             fontSize: 20,
                             color: Colors.grey[100],
@@ -470,7 +470,7 @@ class BoletimPage extends StatelessWidget {
                                   height: 10,
                                 ),
                                 Text(
-                                  'NÚMERO DE INFECTADOS',
+                                  'NÚMERO DE CASOS CONFIRMADOS',
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: Colors.white,
@@ -494,7 +494,7 @@ class BoletimPage extends StatelessWidget {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        '2555',
+                                        '2947',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                           fontSize: 20,
@@ -542,7 +542,7 @@ class BoletimPage extends StatelessWidget {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        '50',
+                                        '53',
                                         style: TextStyle(
                                           fontSize: 20,
                                           color: Colors.grey[100],
@@ -590,7 +590,7 @@ class BoletimPage extends StatelessWidget {
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
                                       Text(
-                                        '2243',
+                                        '2537',
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                           fontSize: 20,
